@@ -39,29 +39,31 @@ const HowWeWork: React.FC = () => {
       {isMobile ? (
         <div style={{ position: 'relative', overflowX: 'hidden' }}>
 
-          <div style={{ padding: '0 16px', position: 'relative', zIndex: 10 }}>
+          <div style={{ padding: '0 16px', position: 'relative', zIndex: 10, background: `linear-gradient(to right, #ffffff 65%, ${YELLOW} 65%)` }}>
             <h3 style={{
               fontFamily: SCRIPT, fontSize: '52px', fontWeight: 400,
               color: '#000', lineHeight: '1',
-              position: 'absolute', top: '0px', left: '16px',
+              position: 'absolute', top: '10px', left: '16px',
               zIndex: 10,
             }}>Demand Driven</h3>
 
             {/* Absolute Arrow starting under 'D' (left: 16px) and curving into yellow box - Pointing to content */}
-            <svg width="200" height="250" viewBox="0 0 200 250" fill="none" style={{ position: 'absolute', left: '16px', top: '50px', zIndex: 15, overflow: 'visible' }}>
+            <svg width="200" height="250" viewBox="0 0 200 250" fill="none" style={{ position: 'absolute', left: '16px', top: '60px', zIndex: 15, overflow: 'visible' }}>
               <path d="M 5 0 L 5 80 Q 5 110 40 110 L 75 110"
                 stroke="#000" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" markerEnd="url(#arrowhead-mobile)" />
             </svg>
 
-            {/* First Yellow Box - Sharp Bottom Corners to Connect Below */}
+            {/* First Yellow Box - Positioned on the split */}
             <div style={{
               backgroundColor: YELLOW,
-              borderRadius: '24px 0 0 0', // Sharp bottom
-              marginLeft: '36px',
-              marginTop: '45px',
-              padding: '95px 16px 40px 45px',
+              borderRadius: '24px 0 0 24px',
+              marginLeft: '60px',
+              marginTop: '55px',
+              padding: '100px 16px 40px 30px',
               minHeight: '220px',
-              display: 'flex', alignItems: 'center'
+              display: 'flex', alignItems: 'center',
+              position: 'relative',
+              zIndex: 5
             }}>
               <p style={{ fontFamily: PILL_FNT, fontSize: '15px', fontWeight: 500, color: '#000', lineHeight: '1.4', margin: 0 }}>
                 We cultivate and source products based<br />on buyer requirements:
@@ -69,22 +71,25 @@ const HowWeWork: React.FC = () => {
             </div>
           </div>
 
-          {/* Connection Area - Yellow matches the 36px margin of the box above (16px padding + 36px margin = 52px) */}
-          <div style={{ position: 'relative', background: isMobile ? `linear-gradient(to right, #ffffff 52px, ${YELLOW} 52px, ${YELLOW} 85%, #ffffff 85%)` : `linear-gradient(to right, #ffffff 52px, ${YELLOW} 52px)` }}>
-            <img src={hww1} alt="Farmers" style={{ width: '100%', maxWidth: '340px', height: 'auto', margin: '0 auto', display: 'block', transform: 'translateY(-10px)', position: 'relative', zIndex: 10 }} />
+          {/* Connection Area - Removing yellow strip for full-width image as requested */}
+          <div style={{ position: 'relative', background: '#fff' }}>
+            <img src={hww1} alt="Farmers" style={{ width: '100%', height: 'auto', margin: '0 auto', display: 'block', transform: 'translateY(-10px)', position: 'relative', zIndex: 10 }} />
           </div>
 
-          {/* Steps Block */}
+          {/* Steps Block - Split continues */}
           <div style={{
-            background: `linear-gradient(to right, #ffffff 52px, ${YELLOW} 52px)`,
-            padding: '10px 0 64px',
+            background: `linear-gradient(to right, #ffffff 60%, ${YELLOW} 60%)`,
+            padding: '10px 0 60px',
             position: 'relative'
           }}>
-            {/* Down arrow pushed to the far right edge to avoid overlap */}
+            {/* Down arrow directly below image */}
             <svg width="24" height="80" viewBox="0 0 30 100" style={{ position: 'absolute', top: '10px', right: '4%', zIndex: 5 }}>
               <line x1="15" y1="0" x2="15" y2="85" stroke="#000" strokeWidth="4" strokeLinecap="round" />
               <path d="M 0 70 L 15 90 L 30 70" stroke="#000" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
             </svg>
+            {/* 200px gap between arrow and cards */}
+            <div style={{ height: '80px' }} />
+
             {/* Pill 1 */}
             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginBottom: '30px' }}>
               <div style={{ position: 'relative', display: 'inline-block', zIndex: 10 }}>
