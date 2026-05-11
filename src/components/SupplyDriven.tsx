@@ -10,7 +10,15 @@ const SupplyDriven: React.FC = () => {
   const isMobile = useIsMobile();
 
   return (
-    <>
+    <section style={{ backgroundColor: '#fff', padding: '0' }}>
+      {/* Global SVG Markers for clean arrowheads across SupplyDriven layout */}
+      <svg width="1" height="1" style={{ position: 'absolute', pointerEvents: 'none', opacity: 0 }}>
+        <defs>
+          <marker id="arrowhead-supply" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#000" />
+          </marker>
+        </defs>
+      </svg>
       {/* ══ TOP BLOCK ══ */}
       {isMobile ? (
         /* ─ MOBILE: layout matching screenshot style ─ */
@@ -54,16 +62,33 @@ const SupplyDriven: React.FC = () => {
             <img src={hww2} alt="Farmer" style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: '80%', objectFit: 'cover', objectPosition: 'center bottom' }} />
           </div>
           <div style={{ flex: '0 0 60%', backgroundColor: YELLOW }} />
-          <p style={{ fontFamily: PILL_FNT, fontSize: '34px', fontWeight: 400, color: '#000', textAlign: 'center', lineHeight: '1.6', position: 'absolute', top: '310px', left: '40%', right: '40px', zIndex: 4, margin: 0 }}>
-            We leverage our wide farmer network<br />to provide:
-          </p>
-          <h3 style={{ fontFamily: SCRIPT, fontSize: '88px', fontWeight: 400, color: '#000', lineHeight: '1', position: 'absolute', top: '5px', left: '50px', zIndex: 5, whiteSpace: 'nowrap', margin: 0 }}>
+          
+          <h3 style={{ 
+            fontFamily: SCRIPT, 
+            fontSize: '88px', 
+            fontWeight: 400, 
+            color: '#000', 
+            lineHeight: '1', 
+            position: 'absolute', 
+            top: '40px', 
+            left: '9%', 
+            zIndex: 5, 
+            whiteSpace: 'nowrap', 
+            margin: 0 
+          }}>
             Supply Driven
           </h3>
-          <svg width="130" height="220" viewBox="0 0 130 220" style={{ position: 'absolute', top: '92px', left: '38%', zIndex: 5, pointerEvents: 'none', overflow: 'visible' }}>
-            <path d="M 0 0 L 80 0 Q 100 0 100 22 L 100 188" stroke="#000" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M 80 168 Q 100 193 120 168" stroke="#000" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+
+          {/* Precision Arrow: Sharp L-shape matching user's green mark */}
+          <svg width="300" height="300" viewBox="0 0 300 300" style={{ position: 'absolute', top: '90px', left: '44.5%', zIndex: 5, pointerEvents: 'none', overflow: 'visible' }}>
+            <path d="M 0 0 L 70 0 L 70 200" stroke="#000" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round" markerEnd="url(#arrowhead-supply)" />
           </svg>
+
+          <div style={{ position: 'absolute', top: '330px', left: '43.5%', zIndex: 4 }}>
+            <p style={{ fontFamily: PILL_FNT, fontSize: '38px', fontWeight: 400, color: '#000', lineHeight: '1.4', margin: 0 }}>
+              We leverage our wide farmer network<br />to provide:
+            </p>
+          </div>
         </section>
       )}
 
@@ -120,33 +145,35 @@ const SupplyDriven: React.FC = () => {
       ) : (
         /* ─ DESKTOP: split layout with arrows ─ */
         <div style={{ display: 'flex', minHeight: '850px', position: 'relative' }}>
-          <div style={{ flex: '0 0 42%', backgroundColor: YELLOW, position: 'relative' }}>
-            <svg width="60" height="190" viewBox="0 0 60 190" style={{ position: 'absolute', top: '22px', left: '80px' }}>
+          <div style={{ flex: '0 0 60%', backgroundColor: YELLOW, position: 'relative' }}>
+            <svg width="60" height="190" viewBox="0 0 60 190" style={{ position: 'absolute', top: '22px', left: '40px' }}>
               <line x1="30" y1="8" x2="30" y2="158" stroke="#000" strokeWidth="5" strokeLinecap="round" />
               <path d="M 8 137 L 30 163 L 52 137" stroke="#000" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
             </svg>
           </div>
-          <div style={{ flex: '0 0 58%', backgroundColor: '#fff' }} />
-          <div style={{ position: 'absolute', top: '380px', left: '10%', width: '54%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <div style={{ flex: '0 0 40%', backgroundColor: '#fff' }} />
+          <div style={{ position: 'absolute', top: '380px', left: '60%', transform: 'translateX(-50%)', width: '60%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <div style={{ position: 'relative', marginBottom: '46px' }}>
               <Pill bg="#FFFDE0" color="#000">Export Quality Products</Pill>
-              <svg width="200" height="180" viewBox="0 0 200 180" style={{ position: 'absolute', right: '100%', top: '-10px', overflow: 'visible' }}>
-                <path d="M 185 35 C 100 35, 30 60, 30 100 C 30 142, 70 162, 110 162" stroke="#000" strokeWidth="7" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M 92 143 L 112 163 L 92 183" stroke="#000" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+              {/* Arrow 1: Compact Left curve */}
+              <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', right: '100%', top: '20px', overflow: 'visible', zIndex: 1 }}>
+                <path d="M 140 0 C 40 0, 40 100, 100 100" stroke="#000" strokeWidth="7" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M 85 85 L 100 100 L 85 115" stroke="#000" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" fill="none" />
               </svg>
             </div>
             <div style={{ position: 'relative', marginBottom: '46px' }}>
               <Pill bg="#8A8A8A" color="#fff">Competitive pricing</Pill>
-              <svg width="200" height="170" viewBox="0 0 200 170" style={{ position: 'absolute', left: '100%', top: '0px', overflow: 'visible' }}>
-                <path d="M 15 35 C 100 35, 170 60, 170 100 C 170 140, 130 160, 90 160" stroke="#000" strokeWidth="7" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M 108 140 L 88 160 L 108 180" stroke="#000" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+              {/* Arrow 2: Compact Desktop Right curve - Pointing exactly to card corner */}
+              <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', left: '100%', top: '20px', overflow: 'visible', zIndex: 1 }}>
+                <path d="M 10 0 C 110 0, 110 100, 10 100" stroke="#000" strokeWidth="7" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M 30 80 L 10 100 L 30 120" stroke="#000" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" fill="none" />
               </svg>
             </div>
             <Pill bg="#FFFDE0" color="#000">Faster turnaround</Pill>
           </div>
         </div>
       )}
-    </>
+    </section>
   );
 };
 

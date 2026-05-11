@@ -88,15 +88,15 @@ const OurStrength: React.FC = () => {
         </div>
       ) : (
         /* ─ DESKTOP: two-column ─ */
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '60px', padding: '0 60px 80px' }}>
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '60px', padding: '0 60px 20px' }}>
           <div style={{ flex: '0 0 48%', display: 'flex', flexDirection: 'column' }}>
-            <h3 style={{ fontFamily: SCRIPT, fontSize: '86px', fontWeight: 400, color: '#000', lineHeight: '1', marginBottom: '20px', whiteSpace: 'nowrap' }}>
+            <h3 style={{ fontFamily: SCRIPT, fontSize: '100px', fontWeight: 400, color: '#000', lineHeight: '1', marginBottom: '20px', whiteSpace: 'nowrap' }}>
               Built on Ground Reality
             </h3>
             <img src={hww3} alt="Farmers and team" style={{ width: '100%', height: '560px', objectFit: 'cover', objectPosition: 'top center', borderRadius: '12px' }} />
           </div>
           <div style={{ flex: 1, paddingTop: '20px' }}>
-            <p style={{ fontFamily: HAND, fontSize: '32px', fontWeight: 400, color: '#000', lineHeight: '1.5', marginBottom: '36px' }}>
+            <p style={{ fontFamily: HAND, fontSize: '40px', fontWeight: 400, color: '#000', lineHeight: '1.4', marginBottom: '36px' }}>
               We are directly connected with multiple farmers, enabling:
             </p>
             {[
@@ -108,7 +108,7 @@ const OurStrength: React.FC = () => {
                 {p.label}
               </div>
             ))}
-            <p style={{ fontFamily: HAND, fontSize: '30px', fontWeight: 400, color: '#000', lineHeight: '1.5', marginTop: '40px' }}>
+            <p style={{ fontFamily: HAND, fontSize: '44px', fontWeight: 500, color: '#000', lineHeight: '1.3', marginTop: '40px' }}>
               We don't depend on middle layers,<br />we work close to the source.
             </p>
           </div>

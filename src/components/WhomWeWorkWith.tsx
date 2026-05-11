@@ -99,7 +99,13 @@ const WhomWeWorkWith: React.FC = () => {
         </text>
 
         {/* ── CENTER LOGO ── */}
-        <image href={xpackLogo} x={cX-87} y={mY-77} width="175" height="155"/>
+        <image 
+          href={xpackLogo} 
+          x={isMobile ? cX-110 : cX-87} 
+          y={isMobile ? mY-97 : mY-77} 
+          width={isMobile ? "220" : "175"} 
+          height={isMobile ? "195" : "155"}
+        />
 
         {/* ══════════════════════════════════════
             BIDIRECTIONAL: LOCAL FARMERS ↔ Center
@@ -110,9 +116,9 @@ const WhomWeWorkWith: React.FC = () => {
             Bottom lane: center-left → farmer-right (goes LEFT ←)
         ══════════════════════════════════════ */}
         {/* → top */}
-        <L x1={fX+gRx} y1={mY-14} x2={cX-68} y2={mY-14}/>
+        <L x1={fX+gRx} y1={mY-14} x2={isMobile ? cX-105 : cX-68} y2={mY-14}/>
         {/* ← bottom: drawn from center toward farmer so arrowhead faces left */}
-        <L x1={cX-68} y1={mY+14} x2={fX+gRx} y2={mY+14}/>
+        <L x1={isMobile ? cX-105 : cX-68} y1={mY+14} x2={fX+gRx} y2={mY+14}/>
 
         {/* ══════════════════════════════════════
             BIDIRECTIONAL: Center ↔ BUYERS
@@ -120,9 +126,9 @@ const WhomWeWorkWith: React.FC = () => {
             Bottom lane: buyer-left → center-right (goes LEFT ←)
         ══════════════════════════════════════ */}
         {/* → top */}
-        <L x1={cX+68} y1={mY-14} x2={bX-gRx} y2={mY-14}/>
+        <L x1={isMobile ? cX+105 : cX+68} y1={mY-14} x2={bX-gRx} y2={mY-14}/>
         {/* ← bottom */}
-        <L x1={bX-gRx} y1={mY+14} x2={cX+68} y2={mY+14}/>
+        <L x1={bX-gRx} y1={mY+14} x2={isMobile ? cX+105 : cX+68} y2={mY+14}/>
 
         {/* ══════════════════════════════════════
             SINGLE: Natural farming ← from LOCAL FARMERS
