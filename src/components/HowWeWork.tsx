@@ -39,7 +39,7 @@ const HowWeWork: React.FC = () => {
       {isMobile ? (
         <div style={{ position: 'relative', overflowX: 'hidden' }}>
 
-          <div style={{ padding: '0 16px', position: 'relative', zIndex: 10, background: `linear-gradient(to right, #ffffff 65%, ${YELLOW} 65%)` }}>
+          <div style={{ padding: '0 16px', position: 'relative', zIndex: 10, background: `linear-gradient(to right, #ffffff 50%, ${YELLOW} 50%)` }}>
             <h3 style={{
               fontFamily: SCRIPT, fontSize: '52px', fontWeight: 400,
               color: '#000', lineHeight: '1',
@@ -78,7 +78,7 @@ const HowWeWork: React.FC = () => {
 
           {/* Steps Block - Split continues */}
           <div style={{
-            background: `linear-gradient(to right, #ffffff 60%, ${YELLOW} 60%)`,
+            background: `linear-gradient(to right, #ffffff 50%, ${YELLOW} 50%)`,
             padding: '10px 0 60px',
             position: 'relative'
           }}>

@@ -24,10 +24,10 @@ const SupplyDriven: React.FC = () => {
         /* ─ MOBILE: Expanded Yellow Architecture ─ */
         <div style={{ position: 'relative', overflowX: 'hidden' }}>
           
-          {/* Section 1: Header (60/40 Split) */}
+          {/* Section 1: Header (50/50 Split) */}
           <div style={{ 
             padding: '100px 0 20px', 
-            background: `linear-gradient(to right, #ffffff 60%, ${YELLOW} 40%)`, // Fixed gradient syntax
+            background: `linear-gradient(to right, #ffffff 50%, ${YELLOW} 50%)`, // Fixed gradient syntax
             minHeight: '160px',
             position: 'relative',
             display: 'flex',
@@ -51,15 +51,15 @@ const SupplyDriven: React.FC = () => {
             </svg>
           </div>
 
-          {/* Section 2: Image (Left 60%) / Text (Right 40%) */}
-          <div style={{ display: 'flex', minHeight: '340px', marginTop: '-80px', position: 'relative', zIndex: 5 }}>
-            {/* Left 60% - White with Image */}
-            <div style={{ flex: '0 0 60%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '10px' }}>
-              <img src={hww2} alt="Farmer" style={{ width: '100%', height: 'auto', objectFit: 'contain' }} />
+          {/* Section 2: Image (Left 50%) / Text (Right 50%) */}
+          <div style={{ display: 'flex', minHeight: '340px', marginTop: '-40px', position: 'relative', zIndex: 5 }}>
+            {/* Left 50% - White with Image */}
+            <div style={{ flex: '0 0 50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0', overflow: 'visible' }}>
+              <img src={hww2} alt="Farmer" style={{ width: '125%', height: 'auto', objectFit: 'contain', transform: 'translateY(80px)', zIndex: 10 }} />
             </div>
-            {/* Right 40% - Yellow with Text */}
+            {/* Right 50% - Yellow with Text */}
             <div style={{ 
-              flex: '0 0 40%', 
+              flex: '0 0 50%', 
               backgroundColor: YELLOW, 
               padding: '100px 16px 40px', 
               display: 'flex', 
@@ -110,9 +110,9 @@ const SupplyDriven: React.FC = () => {
 
       {/* ══ STEPS BLOCK ══ */}
       {isMobile ? (
-        /* ─ MOBILE: Staggered Split (Yellow Left 40% / White Right 60%) ─ */
+        /* ─ MOBILE: Symmetrical Split (Yellow Left 50% / White Right 50%) ─ */
         <div style={{ 
-          background: `linear-gradient(to right, ${YELLOW} 40%, #ffffff 40%)`, 
+          background: `linear-gradient(to right, ${YELLOW} 55%, #ffffff 50%)`, 
           padding: '20px 0 64px',
           position: 'relative',
           overflowX: 'hidden'
@@ -127,33 +127,35 @@ const SupplyDriven: React.FC = () => {
           
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '28px', padding: '0 16px', marginTop: '0' }}>
             
-            {/* Pill 1 - Shifted to the RIGHT (White side) */}
-            <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end', paddingRight: '10%' }}>
+            {/* Pill 1 - Centered on the 50/50 split line */}
+            <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
               <div style={{ position: 'relative', display: 'inline-block' }}>
                 <MobilePill bg="#FFFDE0" color="#000">Export Quality Products</MobilePill>
-                {/* Arrow from Pill 1 to Pill 2 */}
-                <svg width="60" height="80" style={{ position: 'absolute', right: '100%', top: '50%', overflow: 'visible', zIndex: 1 }}>
-                  <path d="M 60 0 C 10 10, 10 50, 75 60" stroke="#000" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M 63 52 L 75 60 L 63 68" stroke="#000" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                {/* Curved Arrow 1: Left */}
+                <svg width="40" height="60" style={{ position: 'absolute', right: '110%', top: '40%', overflow: 'visible', zIndex: 1 }}>
+                  <path d="M 40 0 C 0 0, 0 60, 45 60" stroke="#000" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M 35 54 L 45 60 L 35 66" stroke="#000" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
                 </svg>
               </div>
             </div>
 
-            {/* Pill 2 - Shifted slightly LEFT but still touching white area */}
-            <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end', paddingRight: '20%' }}>
+            {/* Pill 2 - Centered */}
+            <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
               <div style={{ position: 'relative', display: 'inline-block' }}>
                 <MobilePill bg="#8A8A8A" color="#fff">Competitive pricing</MobilePill>
-                {/* Arrow from Pill 2 to Pill 3 */}
-                <svg width="60" height="80" style={{ position: 'absolute', left: '100%', top: '50%', overflow: 'visible', zIndex: 1 }}>
-                  <path d="M 0 0 C 50 10, 50 50, -15 60" stroke="#000" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M -3 52 L -15 60 L -3 68" stroke="#000" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                {/* Curved Arrow 2: Right */}
+                <svg width="40" height="60" style={{ position: 'absolute', left: '100%', top: '50%', overflow: 'visible', zIndex: 1 }}>
+                  <path d="M 0 0 C 40 0, 40 50, -5 50" stroke="#000" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M 5 44 L -5 50 L 5 56" stroke="#000" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
                 </svg>
               </div>
             </div>
 
-            {/* Pill 3 - Shifted to the RIGHT */}
-            <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end', paddingRight: '10%' }}>
-              <MobilePill bg="#FFFDE0" color="#000">Faster turnaround</MobilePill>
+            {/* Pill 3 - Centered */}
+            <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+              <div style={{ position: 'relative', display: 'inline-block' }}>
+                <MobilePill bg="#FFFDE0" color="#000">Faster turnaround</MobilePill>
+              </div>
             </div>
           </div>
         </div>
