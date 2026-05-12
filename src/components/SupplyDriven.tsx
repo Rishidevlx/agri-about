@@ -23,10 +23,10 @@ const SupplyDriven: React.FC = () => {
       {isMobile ? (
         /* ─ MOBILE: Expanded Yellow Architecture ─ */
         <div style={{ position: 'relative', overflowX: 'hidden' }}>
-          
+
           {/* Section 1: Header (50/50 Split) */}
-          <div style={{ 
-            padding: '100px 0 20px', 
+          <div style={{
+            padding: '100px 0 20px',
             background: `linear-gradient(to right, #ffffff 50%, ${YELLOW} 50%)`, // Fixed gradient syntax
             minHeight: '160px',
             position: 'relative',
@@ -58,11 +58,11 @@ const SupplyDriven: React.FC = () => {
               <img src={hww2} alt="Farmer" style={{ width: '125%', height: 'auto', objectFit: 'contain', transform: 'translateY(80px)', zIndex: 10 }} />
             </div>
             {/* Right 50% - Yellow with Text */}
-            <div style={{ 
-              flex: '0 0 50%', 
-              backgroundColor: YELLOW, 
-              padding: '100px 16px 40px', 
-              display: 'flex', 
+            <div style={{
+              flex: '0 0 50%',
+              backgroundColor: YELLOW,
+              padding: '100px 16px 40px',
+              display: 'flex',
               alignItems: 'center'
             }}>
               <p style={{ fontFamily: PILL_FNT, fontSize: '14px', fontWeight: 500, color: '#000', lineHeight: '1.4', margin: 0 }}>
@@ -78,19 +78,19 @@ const SupplyDriven: React.FC = () => {
             <img src={hww2} alt="Farmer" style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: '80%', objectFit: 'cover', objectPosition: 'center bottom' }} />
           </div>
           <div style={{ flex: '0 0 60%', backgroundColor: YELLOW }} />
-          
-          <h3 style={{ 
-            fontFamily: SCRIPT, 
-            fontSize: '88px', 
-            fontWeight: 400, 
-            color: '#000', 
-            lineHeight: '1', 
-            position: 'absolute', 
-            top: '40px', 
-            left: '9%', 
-            zIndex: 5, 
-            whiteSpace: 'nowrap', 
-            margin: 0 
+
+          <h3 style={{
+            fontFamily: SCRIPT,
+            fontSize: '88px',
+            fontWeight: 400,
+            color: '#000',
+            lineHeight: '1',
+            position: 'absolute',
+            top: '40px',
+            left: '9%',
+            zIndex: 5,
+            whiteSpace: 'nowrap',
+            margin: 0
           }}>
             Supply Driven
           </h3>
@@ -111,30 +111,30 @@ const SupplyDriven: React.FC = () => {
       {/* ══ STEPS BLOCK ══ */}
       {isMobile ? (
         /* ─ MOBILE: Symmetrical Split (Yellow Left 50% / White Right 50%) ─ */
-        <div style={{ 
-          background: `linear-gradient(to right, ${YELLOW} 55%, #ffffff 50%)`, 
+        <div style={{
+          background: `linear-gradient(to right, ${YELLOW} 55%, #ffffff 50%)`,
           padding: '20px 0 64px',
           position: 'relative',
           overflowX: 'hidden'
         }}>
           {/* Down arrow directly below image */}
           <svg width="24" height="80" viewBox="0 0 30 100" style={{ position: 'absolute', top: '10px', left: '6%', zIndex: 5 }}>
-            <line x1="15" y1="0" x2="15" y2="85" stroke="#000" strokeWidth="4" strokeLinecap="round"/>
-            <path d="M 0 70 L 15 90 L 30 70" stroke="#000" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+            <line x1="15" y1="0" x2="15" y2="85" stroke="#000" strokeWidth="4" strokeLinecap="round" />
+            <path d="M 0 70 L 15 90 L 30 70" stroke="#000" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
           </svg>
-          {/* 200px gap between arrow and cards */}
-          <div style={{ height: '280px' }} />
-          
+          {/* Reduced gap between arrow and cards */}
+          <div style={{ height: '100px' }} />
+
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '28px', padding: '0 16px', marginTop: '0' }}>
-            
+
             {/* Pill 1 - Centered on the 50/50 split line */}
             <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
               <div style={{ position: 'relative', display: 'inline-block' }}>
                 <MobilePill bg="#FFFDE0" color="#000">Export Quality Products</MobilePill>
                 {/* Curved Arrow 1: Left */}
                 <svg width="40" height="60" style={{ position: 'absolute', right: '110%', top: '40%', overflow: 'visible', zIndex: 1 }}>
-                  <path d="M 40 0 C 0 0, 0 60, 45 60" stroke="#000" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M 35 54 L 45 60 L 35 66" stroke="#000" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                  <path d="M 40 0 C 0 0, 0 60, 45 60" stroke="#000" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M 35 54 L 45 60 L 35 66" stroke="#000" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                 </svg>
               </div>
             </div>
@@ -145,8 +145,8 @@ const SupplyDriven: React.FC = () => {
                 <MobilePill bg="#8A8A8A" color="#fff">Competitive pricing</MobilePill>
                 {/* Curved Arrow 2: Right */}
                 <svg width="40" height="60" style={{ position: 'absolute', left: '100%', top: '50%', overflow: 'visible', zIndex: 1 }}>
-                  <path d="M 0 0 C 40 0, 40 50, -5 50" stroke="#000" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M 5 44 L -5 50 L 5 56" stroke="#000" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                  <path d="M 0 0 C 40 0, 40 50, -5 50" stroke="#000" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M 5 44 L -5 50 L 5 56" stroke="#000" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                 </svg>
               </div>
             </div>

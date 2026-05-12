@@ -96,8 +96,8 @@ const HowWeWork: React.FC = () => {
                 <MobilePill bg="#FFFDE0" color="#000">Specific soil selection</MobilePill>
                 {/* Arrow 1: Compact Left curve - Pushed way left to avoid overlap */}
                 <svg width="40" height="60" style={{ position: 'absolute', right: '130%', top: '40%', overflow: 'visible', zIndex: 1 }}>
-                  <path d="M 40 0 C 0 0, 0 60, 45 60" stroke="#000" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M 35 54 L 45 60 L 35 66" stroke="#000" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                  <path d="M 40 0 C 0 0, 0 60, 45 60" stroke="#000" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M 35 54 L 45 60 L 35 66" stroke="#000" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                 </svg>
               </div>
             </div>
@@ -108,8 +108,8 @@ const HowWeWork: React.FC = () => {
                 <MobilePill bg="#8A8A8A" color="#fff">Organic / Conventional farming</MobilePill>
                 {/* Arrow 2: Compact Right curve */}
                 <svg width="40" height="60" style={{ position: 'absolute', left: '100%', top: '50%', overflow: 'visible', zIndex: 1 }}>
-                  <path d="M 0 0 C 40 0, 40 50, -5 50" stroke="#000" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M 5 44 L -5 50 L 5 56" stroke="#000" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                  <path d="M 0 0 C 40 0, 40 50, -5 50" stroke="#000" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M 5 44 L -5 50 L 5 56" stroke="#000" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                 </svg>
               </div>
             </div>
@@ -134,8 +134,8 @@ const HowWeWork: React.FC = () => {
 
             {/* Desktop Absolute Arrow starting in white layer (left: 0.5%) pointing to text in yellow layer */}
             <svg width="400" height="300" viewBox="0 0 400 300" fill="none" style={{ position: 'absolute', left: '0.5%', top: '120px', zIndex: 5, overflow: 'visible' }}>
-                <path d="M 15 0 L 15 170 Q 15 200 45 200 L 280 200"
-                  stroke="#000" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" markerEnd="url(#arrowhead-desktop)" />
+              <path d="M 15 0 L 15 170 Q 15 200 45 200 L 280 200"
+                stroke="#000" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" markerEnd="url(#arrowhead-desktop)" />
             </svg>
 
             {/* Moved Text Block Higher */}
