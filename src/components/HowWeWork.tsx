@@ -72,6 +72,8 @@ const HowWeWork: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                 viewport={{ once: true }}
                 style={{
                   position: 'relative',
@@ -84,7 +86,8 @@ const HowWeWork: React.FC = () => {
                   zIndex: 2,
                   display: 'flex',
                   justifyContent: 'center',
-                  alignItems: 'center'
+                  alignItems: 'center',
+                  cursor: 'pointer'
                 }}
               >
                 <div style={{
@@ -241,6 +244,7 @@ const HowWeWork: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
                 whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                whileHover={{ scale: 1.05 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1, ease: "easeOut" }}
                 style={{
@@ -254,7 +258,8 @@ const HowWeWork: React.FC = () => {
                   zIndex: 10,
                   display: 'flex',
                   justifyContent: 'center',
-                  alignItems: 'center'
+                  alignItems: 'center',
+                  cursor: 'pointer'
                 }}
               >
                 <div style={{ width: '100%', height: '100%', backgroundColor: YELLOW, borderRadius: '0 100px 100px 100px', overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>

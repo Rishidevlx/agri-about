@@ -48,20 +48,24 @@ const SupplyDriven: React.FC = () => {
             </div>
 
             <div style={{ flex: '0 0 45%', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-              <div style={{
-                position: 'relative',
-                width: '100%',
-                aspectRatio: '1/1',
-                backgroundColor: YELLOW,
-                borderRadius: '80px 0 80px 0',
-                boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
-                padding: '8px',
-                zIndex: 2,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                border: `6px solid ${YELLOW}`
-              }}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                style={{
+                  position: 'relative',
+                  width: '100%',
+                  aspectRatio: '1/1',
+                  backgroundColor: YELLOW,
+                  borderRadius: '80px 0 80px 0',
+                  boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
+                  padding: '8px',
+                  zIndex: 2,
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  border: `6px solid ${YELLOW}`,
+                  cursor: 'pointer'
+                }}>
                 <div style={{
                   width: '100%',
                   height: '100%',
@@ -74,7 +78,7 @@ const SupplyDriven: React.FC = () => {
                 }}>
                   <img src={hww2} alt="Farmer" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
-              </div>
+              </motion.div>
               {/* Mobile Vertical Arrow (Longer) */}
               <svg width="60" height="120" viewBox="0 0 60 120" style={{ position: 'absolute', top: '100%', left: '50%', transform: 'translateX(-50%)', zIndex: 5, overflow: 'visible' }}>
                 <line x1="30" y1="0" x2="30" y2="95" stroke="#000" strokeWidth="4" strokeLinecap="round" />
@@ -137,15 +141,20 @@ const SupplyDriven: React.FC = () => {
               alignItems: 'center',
               zIndex: 2
             }}>
-              <div style={{
-                width: '100%',
-                height: '100%',
-                backgroundColor: YELLOW,
-                borderRadius: '180px 0 180px 0',
-                overflow: 'hidden'
-              }}>
-                <img src={hww2} alt="Farmer" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-              </div>
+                <motion.div 
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                  style={{ 
+                    width: '100%', 
+                    height: '100%', 
+                    backgroundColor: YELLOW, 
+                    borderRadius: '180px 0 180px 0',
+                    overflow: 'hidden',
+                    cursor: 'pointer'
+                  }}
+                >
+                  <img src={hww2} alt="Farmer" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                </motion.div>
             </div>
 
             {/* Down Arrow from Image Container (Longer) */}
