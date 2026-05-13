@@ -1,8 +1,7 @@
 import React from 'react';
 import hww1 from '../assets/HWW 1.png';
 import { useIsMobile } from '../hooks/useIsMobile';
-
-const SCRIPT = "'Great Vibes', 'Sacramento', cursive";
+import { motion } from 'framer-motion';
 const PILL_FNT = "'Patrick Hand', 'Caveat', cursive";
 const YELLOW = '#FFDA44';
 
@@ -10,8 +9,7 @@ const HowWeWork: React.FC = () => {
   const isMobile = useIsMobile();
 
   return (
-    <section style={{ backgroundColor: '#fff', padding: '0' }}>
-      {/* Global SVG Markers for clean arrowheads (Nips) across all layouts */}
+    <section style={{ backgroundColor: '#fff', padding: '0', overflow: 'hidden' }}>
       <svg width="1" height="1" style={{ position: 'absolute', pointerEvents: 'none', opacity: 0 }}>
         <defs>
           <marker id="arrowhead-mobile" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
@@ -37,160 +35,349 @@ const HowWeWork: React.FC = () => {
 
       {/* ══ MOBILE LAYOUT ══ */}
       {isMobile ? (
-        <div style={{ position: 'relative', overflowX: 'hidden' }}>
-
-          <div style={{ padding: '0 16px', position: 'relative', zIndex: 10, background: `linear-gradient(to right, #ffffff 50%, ${YELLOW} 50%)` }}>
-            <h3 style={{
-              fontFamily: SCRIPT, fontSize: '52px', fontWeight: 400,
-              color: '#000', lineHeight: '1',
-              position: 'absolute', top: '10px', left: '16px',
-              zIndex: 10,
-            }}>Demand Driven</h3>
-
-            {/* Absolute Arrow starting under 'D' (left: 16px) and curving into yellow box - Pointing to content */}
-            <svg width="200" height="250" viewBox="0 0 200 250" fill="none" style={{ position: 'absolute', left: '16px', top: '60px', zIndex: 15, overflow: 'visible' }}>
-              <path d="M 5 0 L 5 80 Q 5 110 40 110 L 75 110"
-                stroke="#000" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" markerEnd="url(#arrowhead-mobile)" />
-            </svg>
-
-            {/* First Yellow Box - Positioned on the split */}
-            <div style={{
-              backgroundColor: YELLOW,
-              borderRadius: '24px 0 0 24px',
-              marginLeft: '60px',
-              marginTop: '55px',
-              padding: '100px 16px 40px 30px',
-              minHeight: '220px',
-              display: 'flex', alignItems: 'center',
-              position: 'relative',
-              zIndex: 5
-            }}>
-              <p style={{ fontFamily: PILL_FNT, fontSize: '15px', fontWeight: 500, color: '#000', lineHeight: '1.4', margin: 0 }}>
-                We cultivate and source products based<br />on buyer requirements:
-              </p>
-            </div>
-          </div>
-
-          {/* Connection Area - Removing yellow strip for full-width image as requested */}
-          <div style={{ position: 'relative', background: '#fff' }}>
-            <img src={hww1} alt="Farmers" style={{ width: '100%', height: 'auto', margin: '0 auto', display: 'block', transform: 'translateY(-10px)', position: 'relative', zIndex: 10 }} />
-          </div>
-
-          {/* Steps Block - Split continues */}
+        <div style={{ position: 'relative' }}>
           <div style={{
-            background: `linear-gradient(to right, #ffffff 50%, ${YELLOW} 50%)`,
-            padding: '10px 0 60px',
-            position: 'relative'
+            padding: '20px 16px 60px',
+            backgroundColor: '#fff',
+            position: 'relative',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '10px'
           }}>
-            {/* Down arrow directly below image */}
-            <svg width="24" height="80" viewBox="0 0 30 100" style={{ position: 'absolute', top: '10px', right: '4%', zIndex: 5 }}>
-              <line x1="15" y1="0" x2="15" y2="85" stroke="#000" strokeWidth="4" strokeLinecap="round" />
-              <path d="M 0 70 L 15 90 L 30 70" stroke="#000" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-            </svg>
-            {/* 200px gap between arrow and cards */}
-            <div style={{ height: '80px' }} />
+            <div style={{ flex: '0 0 55%', zIndex: 10 }}>
+              <motion.h3
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                style={{
+                  fontFamily: 'Montserrat, sans-serif', fontSize: '32px', fontWeight: 800,
+                  color: '#000', lineHeight: '0.9', marginBottom: '16px', letterSpacing: '-1.5px'
+                }}
+              >
+                Demand<br />Driven
+              </motion.h3>
 
-            {/* Pill 1 */}
-            <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginBottom: '30px' }}>
-              <div style={{ position: 'relative', display: 'inline-block', zIndex: 10 }}>
-                <MobilePill bg="#FFFDE0" color="#000">Specific soil selection</MobilePill>
-                {/* Arrow 1: Compact Left curve - Pushed way left to avoid overlap */}
-                <svg width="40" height="60" style={{ position: 'absolute', right: '130%', top: '40%', overflow: 'visible', zIndex: 1 }}>
-                  <path d="M 40 0 C 0 0, 0 60, 45 60" stroke="#000" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M 35 54 L 45 60 L 35 66" stroke="#000" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                </svg>
-              </div>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                style={{ fontFamily: PILL_FNT, fontSize: '13px', fontWeight: 500, color: '#333', lineHeight: '1.3', margin: 0 }}
+              >
+                We cultivate and source products based on buyer requirements:
+              </motion.p>
             </div>
 
-            {/* Pill 2 */}
-            <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginBottom: '30px' }}>
-              <div style={{ position: 'relative', display: 'inline-block', zIndex: 10 }}>
-                <MobilePill bg="#8A8A8A" color="#fff">Organic / Conventional farming</MobilePill>
-                {/* Arrow 2: Compact Right curve */}
-                <svg width="40" height="60" style={{ position: 'absolute', left: '100%', top: '50%', overflow: 'visible', zIndex: 1 }}>
-                  <path d="M 0 0 C 40 0, 40 50, -5 50" stroke="#000" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M 5 44 L -5 50 L 5 56" stroke="#000" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                </svg>
-              </div>
+            <div style={{ flex: '0 0 45%', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                style={{
+                  position: 'relative',
+                  width: '100%',
+                  aspectRatio: '1/1',
+                  backgroundColor: '#fff',
+                  borderRadius: '0 40px 40px 40px',
+                  boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
+                  padding: '8px',
+                  zIndex: 2,
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}
+              >
+                <div style={{
+                  width: '100%',
+                  height: '100%',
+                  backgroundColor: YELLOW,
+                  borderRadius: '0 35px 35px 35px',
+                  overflow: 'hidden',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>
+                  <img src={hww1} alt="Farmers" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                </div>
+              </motion.div>
+
+              <svg width="24" height="120" style={{ position: 'absolute', bottom: '-120px', left: '50%', transform: 'translateX(-50%)', zIndex: 1, overflow: 'visible' }}>
+                <line x1="12" y1="0" x2="12" y2="100" stroke="#000" strokeWidth="3" strokeLinecap="round" />
+                <path d="M 3 90 L 12 110 L 21 90" stroke="#000" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+              </svg>
+            </div>
+          </div>
+
+          {/* Mobile Steps Block (Mirrors Desktop Side-by-Side) */}
+          <div style={{ 
+            padding: '40px 12px', 
+            backgroundColor: '#FDFDFD',
+            display: 'flex',
+            gap: '20px',
+            alignItems: 'center'
+          }}>
+            {/* Left: Mobile Pills with Connecting Arrows */}
+            <div style={{ flex: '0 0 55%', display: 'flex', flexDirection: 'column', gap: '32px', alignItems: 'center' }}>
+               
+               {/* Mobile Pill 1 */}
+               <div style={{ position: 'relative' }}>
+                 <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+                    <MobilePill bg="#FFFDE0" color="#000">Specific soil selection</MobilePill>
+                 </motion.div>
+                 {/* Scaled Arrow 1 (Left) */}
+                 <svg width="60" height="70" viewBox="0 0 150 150" style={{ position: 'absolute', right: '95%', top: '15px', overflow: 'visible', zIndex: 1 }}>
+                    <path d="M 140 0 C 40 0, 40 100, 100 100" stroke="#000" strokeWidth="8" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M 85 85 L 100 100 L 85 115" stroke="#000" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                 </svg>
+               </div>
+
+               {/* Mobile Pill 2 */}
+               <div style={{ position: 'relative' }}>
+                 <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
+                    <MobilePill bg="#8A8A8A" color="#fff">Organic / Conventional</MobilePill>
+                 </motion.div>
+                 {/* Scaled Arrow 2 (Right) */}
+                 <svg width="60" height="70" viewBox="0 0 150 150" style={{ position: 'absolute', left: '102%', top: '15px', overflow: 'visible', zIndex: 1 }}>
+                    <path d="M 10 0 C 110 0, 110 100, 10 100" stroke="#000" strokeWidth="8" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M 30 80 L 10 100 L 30 120" stroke="#000" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                 </svg>
+               </div>
+
+               {/* Mobile Pill 3 */}
+               <div style={{ position: 'relative' }}>
+                 <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
+                    <MobilePill bg="#FFFDE0" color="#000">Custom quality standards</MobilePill>
+                 </motion.div>
+               </div>
             </div>
 
-            {/* Pill 3 */}
-            <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-              <div style={{ position: 'relative', display: 'inline-block', zIndex: 10 }}>
-                <MobilePill bg="#FFFDE0" color="#000">Custom quality standards</MobilePill>
-              </div>
+            {/* Right: Mobile Heading/Text */}
+            <div style={{ flex: '0 0 45%' }}>
+               <motion.h4 
+                 initial={{ opacity: 0, y: 20 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 viewport={{ once: true }}
+                 style={{ 
+                   fontFamily: 'Montserrat, sans-serif', 
+                   fontSize: '24px', 
+                   fontWeight: 800, 
+                   color: '#000', 
+                   lineHeight: '1.1',
+                   marginBottom: '12px'
+                 }}
+               >
+                 Our Precision <br /><span style={{ color: YELLOW }}>Process</span>
+               </motion.h4>
+               <motion.p 
+                 initial={{ opacity: 0, y: 15 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 viewport={{ once: true }}
+                 transition={{ delay: 0.2 }}
+                 style={{ 
+                   fontFamily: 'Montserrat, sans-serif', 
+                   fontSize: '11px', 
+                   color: '#555', 
+                   lineHeight: '1.4'
+                 }}
+               >
+                 Eliminating waste, ensuring guaranteed buyers through a demand-driven model.
+               </motion.p>
             </div>
           </div>
         </div>
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column' }}>
 
-          {/* ─ DESKTOP DEMAND DRIVEN ─ */}
-          <div style={{ position: 'relative', height: '520px', overflow: 'hidden', marginBottom: '0px' }}>
-            {/* Connected Yellow Background (No bottom radius) - Extended width */}
-            <div style={{ position: 'absolute', top: '20px', left: '5%', right: '20%', bottom: '-1px', backgroundColor: YELLOW, borderRadius: '30px 30px 0 0', zIndex: 1 }} />
+          {/* ─ DESKTOP DEMAND DRIVEN (NEW LAYOUT) ─ */}
+          <div style={{
+            position: 'relative',
+            height: '650px',
+            display: 'flex',
+            alignItems: 'center',
+            padding: '0 5% 0 8%',
+            backgroundColor: '#fff'
+          }}>
+            {/* Left side: Heading and Subtext */}
+            <div style={{ flex: '0 0 55%', zIndex: 10 }}>
+              <motion.h3
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                style={{
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontSize: '96px',
+                  fontWeight: 800,
+                  color: '#000',
+                  lineHeight: '0.85',
+                  marginBottom: '40px',
+                  letterSpacing: '-4px'
+                }}
+              >
+                Demand<br />Driven
+              </motion.h3>
 
-            <h3 style={{ fontFamily: SCRIPT, fontSize: '78px', fontWeight: 400, color: '#000', lineHeight: '1', position: 'absolute', top: '32px', left: '0.5%', zIndex: 3, whiteSpace: 'nowrap', margin: 0 }}>Demand Driven</h3>
-
-            {/* Desktop Absolute Arrow starting in white layer (left: 0.5%) pointing to text in yellow layer */}
-            <svg width="400" height="300" viewBox="0 0 400 300" fill="none" style={{ position: 'absolute', left: '0.5%', top: '120px', zIndex: 5, overflow: 'visible' }}>
-              <path d="M 15 0 L 15 170 Q 15 200 45 200 L 280 200"
-                stroke="#000" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" markerEnd="url(#arrowhead-desktop)" />
-            </svg>
-
-            {/* Moved Text Block Higher */}
-            <div style={{ position: 'absolute', top: '240px', left: '22%', zIndex: 3, display: 'flex', alignItems: 'center' }}>
-              <p style={{ fontFamily: PILL_FNT, fontSize: '32px', fontWeight: 400, color: '#000', lineHeight: '1.6', textAlign: 'center', margin: 0 }}>
-                We cultivate and source products based<br />on buyer requirements:
-              </p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                style={{
+                  fontFamily: PILL_FNT,
+                  fontSize: '32px',
+                  fontWeight: 400,
+                  color: '#333',
+                  lineHeight: '1.4',
+                  maxWidth: '550px'
+                }}
+              >
+                We cultivate and source products based on buyer requirements:
+              </motion.p>
             </div>
 
-            <div style={{ position: 'absolute', top: '0', right: '0', width: '40%', height: '100%', zIndex: 2, overflow: 'hidden' }}>
-              <img src={hww1} alt="Farmers" style={{ position: 'absolute', bottom: 0, right: 0, height: '540px', width: 'auto', objectFit: 'contain', objectPosition: 'bottom right' }} />
+            {/* Right side: Image with unique shape */}
+            <div style={{ flex: '0 0 45%', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
+                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                style={{
+                  position: 'relative',
+                  width: '480px',
+                  height: '480px',
+                  backgroundColor: '#fff',
+                  borderRadius: '0 120px 120px 120px',
+                  boxShadow: '0 40px 100px rgba(0,0,0,0.12)',
+                  padding: '24px',
+                  zIndex: 10,
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}
+              >
+                <div style={{ width: '100%', height: '100%', backgroundColor: YELLOW, borderRadius: '0 100px 100px 100px', overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                  <img src={hww1} alt="Farmers" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                </div>
+              </motion.div>
+
+              <div style={{
+                position: 'absolute',
+                right: '-10%',
+                top: '60%',
+                width: '120px',
+                height: '4px',
+                backgroundColor: YELLOW,
+                zIndex: 1
+              }}>
+                <div style={{
+                  position: 'absolute',
+                  right: 0,
+                  top: '-6px',
+                  width: '16px',
+                  height: '16px',
+                  borderRadius: '50%',
+                  border: `3px solid ${YELLOW}`,
+                  backgroundColor: '#fff'
+                }} />
+              </div>
+
+              <svg width="40" height="250" style={{ position: 'absolute', bottom: '-250px', left: '46%', zIndex: 1, overflow: 'visible' }}>
+                <line x1="20" y1="0" x2="20" y2="230" stroke="#000" strokeWidth="4" strokeLinecap="round" />
+                <path d="M 5 210 L 20 240 L 35 210" stroke="#000" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+              </svg>
             </div>
           </div>
 
           {/* ─ DESKTOP STEPS BLOCK ─ */}
-          <div style={{ display: 'flex', minHeight: '850px', position: 'relative', overflow: 'hidden' }}>
-            {/* 40% White, 55% Yellow, 5% White boundary setup */}
-            <div style={{ flex: '0 0 40%', backgroundColor: '#fff' }} />
-            <div style={{ flex: '0 0 55%', backgroundColor: YELLOW, position: 'relative' }}>
-              {/* Desktop Down Arrow inside the Yellow Box */}
-              <svg width="60" height="190" viewBox="0 0 60 190" style={{ position: 'absolute', top: '30px', right: '40px' }}>
-                <line x1="30" y1="8" x2="30" y2="158" stroke="#000" strokeWidth="5" strokeLinecap="round" />
-                <path d="M 8 137 L 30 163 L 52 137" stroke="#000" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-              </svg>
+          <div style={{
+            display: 'flex',
+            minHeight: '700px',
+            padding: '80px 8%',
+            backgroundColor: '#fff',
+            gap: '10%',
+            alignItems: 'center'
+          }}>
+            {/* Left: Simple Pills with Connecting Arrows */}
+            {/* Left: Simple Pills with Connecting Arrows (Matching SupplyDriven Logic) */}
+            <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '46px', alignItems: 'center', zIndex: 10 }}>
+               
+               {/* Pill 1 */}
+               <div style={{ position: 'relative' }}>
+                 <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+                    <Pill bg="#FFFDE0" color="#000">Specific soil selection</Pill>
+                 </motion.div>
+                 
+                 {/* Compact Left Curve from SupplyDriven */}
+                 <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', right: '100%', top: '20px', overflow: 'visible', zIndex: 1 }}>
+                    <path d="M 140 0 C 40 0, 40 100, 100 100" stroke="#000" strokeWidth="7" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M 85 85 L 100 100 L 85 115" stroke="#000" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                 </svg>
+               </div>
+
+               {/* Pill 2 */}
+               <div style={{ position: 'relative' }}>
+                 <motion.div 
+                   initial={{ opacity: 0, x: -30 }} 
+                   whileInView={{ opacity: 1, x: 0 }} 
+                   viewport={{ once: true }} 
+                   transition={{ delay: 0.1 }}
+                 >
+                    <Pill bg="#8A8A8A" color="#fff">Organic / Conventional farming</Pill>
+                 </motion.div>
+
+                 {/* Compact Right Curve from SupplyDriven */}
+                 <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', left: '100%', top: '20px', overflow: 'visible', zIndex: 1 }}>
+                    <path d="M 10 0 C 110 0, 110 100, 10 100" stroke="#000" strokeWidth="7" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M 30 80 L 10 100 L 30 120" stroke="#000" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                 </svg>
+               </div>
+
+               {/* Pill 3 */}
+               <div style={{ position: 'relative' }}>
+                 <motion.div 
+                   initial={{ opacity: 0, x: -30 }} 
+                   whileInView={{ opacity: 1, x: 0 }} 
+                   viewport={{ once: true }} 
+                   transition={{ delay: 0.2 }}
+                 >
+                    <Pill bg="#FFFDE0" color="#000">Custom quality standards</Pill>
+                 </motion.div>
+               </div>
             </div>
-            <div style={{ flex: '0 0 5%', backgroundColor: '#fff' }} />
 
-            {/* Cards centered EXACTLY on the 40/55 boundary with reduced gap */}
-            <div style={{ position: 'absolute', top: '150px', left: '40%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '40px', zIndex: 5, width: '100%' }}>
-
-              {/* Card 1 */}
-              <div style={{ position: 'relative', zIndex: 10 }}>
-                <Pill bg="#FFFDE0" color="#000">Specific soil selection</Pill>
-                {/* Arrow 1: Compact Desktop Left curve */}
-                <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', right: '100%', top: '20px', overflow: 'visible', zIndex: 1 }}>
-                  <path d="M 140 0 C 40 0, 40 100, 100 100" stroke="#000" strokeWidth="7" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M 85 85 L 100 100 L 85 115" stroke="#000" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                </svg>
-              </div>
-
-              {/* Card 2 */}
-              <div style={{ position: 'relative', zIndex: 10 }}>
-                <Pill bg="#8A8A8A" color="#fff">Organic / Conventional farming</Pill>
-                {/* Arrow 2: Compact Desktop Right curve - Pointing exactly to card corner */}
-                <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', left: '100%', top: '20px', overflow: 'visible', zIndex: 1 }}>
-                  <path d="M 5 0 C 120 0, 120 120, 5 120" stroke="#000" strokeWidth="7" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M 25 105 L 5 120 L 25 135" stroke="#000" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                </svg>
-              </div>
-
-              {/* Card 3 */}
-              <div style={{ position: 'relative', zIndex: 10 }}>
-                <Pill bg="#FFFDE0" color="#000">Custom quality standards</Pill>
-              </div>
-
+            {/* Right: The Heading/Text (near where the arrow points) */}
+            <div style={{ flex: '1', position: 'relative' }}>
+              <motion.h4
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                style={{
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontSize: '64px',
+                  fontWeight: 800,
+                  color: '#000',
+                  lineHeight: '1.1',
+                  marginBottom: '32px'
+                }}
+              >
+                Our Precision <br /><span style={{ color: YELLOW }}>Process</span>
+              </motion.h4>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                style={{
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontSize: '20px',
+                  color: '#555',
+                  lineHeight: '1.7',
+                  maxWidth: '500px'
+                }}
+              >
+                By shifting the focus from "what we have" to "what you need," we eliminate waste and ensure that every harvest has a guaranteed buyer. Our demand-driven model is the future of sustainable, profitable agriculture.
+              </motion.p>
             </div>
           </div>
         </div>
@@ -199,14 +386,38 @@ const HowWeWork: React.FC = () => {
   );
 };
 
-const Pill: React.FC<{ bg: string; color: string; children: React.ReactNode; radius?: string }> = ({ bg, color, children, radius = '50px' }) => (
-  <div style={{ backgroundColor: bg, borderRadius: radius, padding: '16px 52px', fontFamily: PILL_FNT, fontSize: '28px', fontWeight: 400, color, whiteSpace: 'nowrap', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
+const Pill: React.FC<{ bg: string; color: string; children: React.ReactNode }> = ({ bg, color, children }) => (
+  <div style={{
+    backgroundColor: bg,
+    borderRadius: '50px',
+    padding: '16px 52px',
+    fontFamily: PILL_FNT,
+    fontSize: '28px',
+    fontWeight: 400,
+    color,
+    whiteSpace: 'nowrap',
+    boxShadow: '0 10px 25px rgba(0,0,0,0.05)'
+  }}>
     {children}
   </div>
 );
 
-const MobilePill: React.FC<{ bg: string; color: string; children: React.ReactNode; radius?: string }> = ({ bg, color, children, radius = '50px' }) => (
-  <div style={{ position: 'relative', zIndex: 2, backgroundColor: bg, borderRadius: radius, padding: '8px 14px', fontFamily: PILL_FNT, fontSize: '13px', fontWeight: 600, color, textAlign: 'center', width: 'max-content', maxWidth: '180px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
+const MobilePill: React.FC<{ bg: string; color: string; children: React.ReactNode }> = ({ bg, color, children }) => (
+  <div style={{ 
+    position: 'relative', 
+    zIndex: 2, 
+    backgroundColor: bg, 
+    borderRadius: '50px', 
+    padding: '6px 14px', 
+    fontFamily: PILL_FNT, 
+    fontSize: '11px', 
+    fontWeight: 600, 
+    color, 
+    textAlign: 'center', 
+    width: 'max-content', 
+    maxWidth: '160px', 
+    boxShadow: '0 4px 10px rgba(0,0,0,0.05)' 
+  }}>
     {children}
   </div>
 );
