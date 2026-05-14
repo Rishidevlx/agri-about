@@ -54,13 +54,13 @@ const WhomWeWorkWith: React.FC = () => {
             {/* Radial glows */}
             <radialGradient id="gfarm" cx="50%" cy="50%" r="50%">
               <stop offset="0%" stopColor="#FFDA44" stopOpacity="0.80" />
-              <stop offset="55%" stopColor="#FFCC33" stopOpacity="0.30" />
-              <stop offset="100%" stopColor="#FFCC33" stopOpacity="0" />
+              <stop offset="55%" stopColor="#FFDA44" stopOpacity="0.30" />
+              <stop offset="100%" stopColor="#FFDA44" stopOpacity="0" />
             </radialGradient>
             <radialGradient id="gbuy" cx="50%" cy="50%" r="50%">
               <stop offset="0%" stopColor="#FFDA44" stopOpacity="0.95" />
-              <stop offset="50%" stopColor="#FFCC33" stopOpacity="0.45" />
-              <stop offset="100%" stopColor="#FFCC33" stopOpacity="0" />
+              <stop offset="50%" stopColor="#FFDA44" stopOpacity="0.45" />
+              <stop offset="100%" stopColor="#FFDA44" stopOpacity="0" />
             </radialGradient>
 
             {/* ── Clean open-V arrowhead marker ──

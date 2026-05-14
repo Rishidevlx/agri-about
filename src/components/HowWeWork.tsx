@@ -181,7 +181,7 @@ const HowWeWork: React.FC = () => {
             backgroundColor: '#fff'
           }}>
             {/* Left side: Heading and Subtext */}
-            <div style={{ flex: '0 0 55%', zIndex: 10, paddingTop: '700px' }}>
+            <div style={{ flex: '0 0 55%', zIndex: 10, paddingTop: '100px' }}>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
