@@ -55,8 +55,7 @@ const SupplyDriven: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
                 viewport={{ once: true }}
                 style={{
                   position: 'relative',
@@ -146,7 +145,7 @@ const SupplyDriven: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
               whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-              whileHover={{ scale: 1.05 }}
+
               viewport={{ once: true }}
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
               style={{
@@ -297,7 +296,6 @@ const SupplyDriven: React.FC = () => {
 // ══ STYLED COMPONENTS ══
 const Pill: React.FC<{ bg: string; color: string; children: React.ReactNode }> = ({ bg, color, children }) => (
   <motion.div
-    whileHover={{ scale: 1.05, boxShadow: '0 15px 35px rgba(0,0,0,0.1)' }}
     transition={{ duration: 0.4, ease: "easeOut" }}
     style={{
       backgroundColor: bg,
@@ -319,7 +317,7 @@ const Pill: React.FC<{ bg: string; color: string; children: React.ReactNode }> =
 
 const MobilePill: React.FC<{ bg: string; color: string; children: React.ReactNode }> = ({ bg, color, children }) => (
   <motion.div
-    whileHover={{ scale: 1.05 }}
+
     style={{
       position: 'relative',
       zIndex: 2,

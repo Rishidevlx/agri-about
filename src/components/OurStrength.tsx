@@ -64,7 +64,7 @@ const OurStrength: React.FC = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 * i }}
-                    whileHover={{ scale: 1.05 }}
+                
                     style={{
                       backgroundColor: p.bg,
                       borderRadius: '50px',
@@ -103,7 +103,7 @@ const OurStrength: React.FC = () => {
             <motion.img
               src={hww3}
               alt="Farmers and team"
-              whileHover={{ scale: 1.03 }}
+
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
               style={{ width: '100%', height: '560px', objectFit: 'cover', objectPosition: 'top center', borderRadius: '12px', cursor: 'pointer' }}
             />
@@ -123,7 +123,7 @@ const OurStrength: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 * i }}
-                whileHover={{ scale: 1.05, x: 10 }}
+
                 style={{ backgroundColor: p.bg, borderRadius: '50px', padding: '16px 48px', marginBottom: '20px', fontFamily: HAND, fontSize: '28px', fontWeight: 400, color: p.color, width: 'fit-content', cursor: 'pointer', boxShadow: '0 10px 20px rgba(0,0,0,0.05)' }}
               >
                 {p.label}

@@ -74,7 +74,7 @@ const HowWeWork: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                whileHover={{ scale: 1.05 }}
+
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 viewport={{ once: true }}
                 style={{
@@ -216,7 +216,7 @@ const HowWeWork: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
                 whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-                whileHover={{ scale: 1.05 }}
+
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 style={{
@@ -269,15 +269,45 @@ const HowWeWork: React.FC = () => {
                 }} />
               </div>
 
-              {/* Desktop Vertical Arrow (Longer) */}
-              <svg width="100" height="200" style={{ position: 'absolute', bottom: '-200px', left: '46%', zIndex: 1, overflow: 'visible' }}>
-                {/* Decorative Circles */}
-                <circle cx="50" cy="130" r="40" stroke="#eee" strokeWidth="1.5" fill="none" />
-                <circle cx="50" cy="130" r="60" stroke="#f5f5f5" strokeWidth="1.5" fill="none" />
+              {/* Desktop Vertical Arrow (Longer) with Text */}
+              <div style={{ 
+                position: 'absolute', 
+                bottom: '-420px', 
+                left: '12%', 
+                width: '400px', 
+                display: 'flex', 
+                flexDirection: 'column', 
+                alignItems: 'center', 
+                zIndex: 10 
+              }}>
+                <svg width="100" height="200" style={{ overflow: 'visible' }}>
+                  {/* Decorative Circles */}
+                  <circle cx="50" cy="130" r="40" stroke="#eee" strokeWidth="1.5" fill="none" />
+                  <circle cx="50" cy="130" r="60" stroke="#f5f5f5" strokeWidth="1.5" fill="none" />
 
-                <line x1="50" y1="0" x2="50" y2="130" stroke="#000" strokeWidth="2" strokeLinecap="round" />
-                <path d="M 35 110 L 50 130 L 65 110" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-              </svg>
+                  <line x1="50" y1="0" x2="50" y2="130" stroke="#000" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M 35 110 L 50 130 L 65 110" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                </svg>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                  style={{
+                    fontFamily: FONT_CONTENT,
+                    fontSize: '24px',
+                    fontWeight: 500,
+                    color: '#333',
+                    textAlign: 'center',
+                    marginTop: '30px',
+                    lineHeight: '1.4',
+                    maxWidth: '400px'
+                  }}
+                >
+                  We don’t depend on middle layers, <br />
+                  we work close to the source.
+                </motion.p>
+              </div>
             </div>
           </div>
 
@@ -290,11 +320,8 @@ const HowWeWork: React.FC = () => {
             gap: '10%',
             alignItems: 'center'
           }}>
-            {/* Left: Empty (Maintains original position) */}
-            <div style={{ flex: '1' }} />
-
-            {/* Right: Process Pills */}
-            <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '46px', alignItems: 'center', zIndex: 10 }}>
+            {/* Left: Process Pills */}
+            <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '46px', alignItems: 'center', zIndex: 10, paddingTop: '180px' }}>
               {/* Pill 1 */}
               <div style={{ position: 'relative' }}>
                 <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
@@ -326,6 +353,9 @@ const HowWeWork: React.FC = () => {
                 </motion.div>
               </div>
             </div>
+
+            {/* Right: Empty */}
+            <div style={{ flex: '1' }} />
           </div>
         </div>
       )}
@@ -335,7 +365,6 @@ const HowWeWork: React.FC = () => {
 
 const Pill: React.FC<{ bg: string; color: string; children: React.ReactNode }> = ({ bg, color, children }) => (
   <motion.div
-    whileHover={{ scale: 1.05, boxShadow: '0 15px 35px rgba(0,0,0,0.1)' }}
     transition={{ duration: 0.4, ease: "easeOut" }}
     style={{
       backgroundColor: bg,
@@ -357,7 +386,6 @@ const Pill: React.FC<{ bg: string; color: string; children: React.ReactNode }> =
 
 const MobilePill: React.FC<{ bg: string; color: string; children: React.ReactNode }> = ({ bg, color, children }) => (
   <motion.div
-    whileHover={{ scale: 1.05 }}
     transition={{ duration: 0.4, ease: "easeOut" }}
     style={{
       position: 'relative',
