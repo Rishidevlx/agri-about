@@ -51,7 +51,7 @@ const AboutUs: React.FC = () => {
           </div>
           <div style={{ flex: '1', backgroundColor: '#FFDA44', borderRadius: '28px', padding: '44px 50px' }}>
             <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '18px', fontWeight: 700, lineHeight: '1.85', color: '#ffffff', textAlign: 'justify' }}>
-              <span style={{ fontWeight: 900, color: '#000000' }}>Pact Ventures</span>{' '}
+              <span style={{ fontWeight: 900, color: '#000000' }}>X Pact Ventures</span>{' '}
               is a dynamic export-import company based in Tamil Nadu, South India. We specialize in
               exporting high-quality agricultural products by collaborating with local farmers and trusted
               international traders, delivering the richness of Indian products to global markets. At the

@@ -24,93 +24,68 @@ const OurStrength: React.FC = () => {
       </h2>
 
       {isMobile ? (
-        /* ─ MOBILE: layout matching screenshot ─ */
-        <div style={{ padding: '0 16px 20px', position: 'relative' }}>
-          <div style={{ position: 'relative', height: '100px', width: '100%' }}>
-            <motion.h3
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
+        /* ─ MOBILE: Refined staggered layout ─ */
+        <div style={{ padding: '0 16px 40px', position: 'relative', backgroundColor: YELLOW }}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            style={{ textAlign: 'center', marginBottom: '32px' }}
+          >
+            <h3 style={{ fontFamily: SCRIPT, fontSize: '52px', fontWeight: 400, color: '#000', lineHeight: '1.1', margin: 0 }}>Built on Ground Reality</h3>
+          </motion.div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '30px', alignItems: 'center' }}>
+            {/* Image Section */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              style={{
-                fontFamily: SCRIPT, fontSize: '42px', fontWeight: 400,
-                color: '#000', lineHeight: '1', position: 'absolute', top: 0, width: '100%', textAlign: 'center', margin: 0
-              }}
+              style={{ width: '90%', display: 'flex', justifyContent: 'center' }}
             >
-              Built on
-            </motion.h3>
-            <motion.h3
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              style={{
-                fontFamily: SCRIPT, fontSize: '42px', fontWeight: 400,
-                color: '#000', lineHeight: '1', position: 'absolute', top: '42px', width: '100%', textAlign: 'center', margin: 0
-              }}
-            >
-              Reality
-            </motion.h3>
-          </div>
+              <img src={hww3} alt="Farmers" style={{ width: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
+            </motion.div>
 
-          <div style={{ position: 'relative', width: '100%', minHeight: '240px' }}>
-            {/* Left side: Image (Absolute to bottom left, independently scaled) */}
-            <motion.img
-              src={hww3}
-              alt="Farmers and team"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 15 }}
-              style={{
-                position: 'absolute',
-                bottom: '-5px',
-                left: '-30px',
-                width: '70%',
-                maxWidth: 'none',
-                height: 'auto',
-                zIndex: 1,
-                cursor: 'pointer'
-              }}
-            />
+            {/* Subtext */}
+            <p style={{ fontFamily: HAND, fontSize: '16px', color: '#000', lineHeight: '1.4', textAlign: 'center', margin: '0', maxWidth: '90%' }}>
+              We are directly connected with multiple farmers, enabling:
+            </p>
 
-            {/* Right side: Text and Pills (Absolute to right, vertically centered) */}
-            <div style={{
-              position: 'absolute',
-              top: '50%',
-              right: '0',
-              transform: 'translateY(-50%)',
-              width: '55%',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              zIndex: 2
-            }}>
-              <p style={{ fontFamily: HAND, fontSize: '9.5px', color: '#000', lineHeight: '1.3', textAlign: 'center', margin: '0 0 10px 0', whiteSpace: 'nowrap' }}>
-                We are directly connected with multiple farmers, enabling:
-              </p>
-
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', width: '100%', alignItems: 'center' }}>
-                {[
-                  { label: 'Better pricing control', bg: '#FFFDE0', color: '#000' },
-                  { label: 'Quality consistency', bg: '#8A8A8A', color: '#fff' },
-                  { label: 'Reliable sourcing', bg: '#FFFDE0', color: '#000' },
-                ].map((p, i) => (
+            {/* Staggered Pills */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', width: '100%' }}>
+              {[
+                { label: 'Better pricing control', bg: '#FFFDE0', color: '#000', align: 'flex-start' },
+                { label: 'Quality consistency', bg: '#8A8A8A', color: '#fff', align: 'flex-end' },
+                { label: 'Reliable sourcing', bg: '#FFFDE0', color: '#000', align: 'flex-start' },
+              ].map((p, i) => (
+                <div key={p.label} style={{ width: '100%', display: 'flex', justifyContent: p.align }}>
                   <motion.div
-                    key={p.label}
-                    initial={{ opacity: 0, x: 20 }}
+                    initial={{ opacity: 0, x: p.align === 'flex-start' ? -20 : 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 * i }}
-                    whileHover={{ scale: 1.08 }}
-                    style={{ backgroundColor: p.bg, borderRadius: '50px', padding: '6px 10px', fontFamily: 'Montserrat, sans-serif', fontSize: '9px', fontWeight: 700, color: p.color, width: 'max-content', textAlign: 'center', boxShadow: '0 2px 4px rgba(0,0,0,0.05)', cursor: 'pointer' }}
+                    whileHover={{ scale: 1.05 }}
+                    style={{
+                      backgroundColor: p.bg,
+                      borderRadius: '50px',
+                      padding: '10px 20px',
+                      fontFamily: 'Montserrat, sans-serif',
+                      fontSize: '13px',
+                      fontWeight: 700,
+                      color: p.color,
+                      boxShadow: '0 4px 10px rgba(0,0,0,0.05)',
+                      cursor: 'pointer'
+                    }}
                   >
                     {p.label}
                   </motion.div>
-                ))}
-              </div>
-
-              <p style={{ fontFamily: HAND, fontSize: '11px', color: '#000', lineHeight: '1.3', textAlign: 'center', margin: '14px 0 0 0' }}>
-                We don't depend on middle layers,<br />we work close to the source.
-              </p>
+                </div>
+              ))}
             </div>
+
+            <p style={{ fontFamily: HAND, fontSize: '18px', color: '#000', lineHeight: '1.3', textAlign: 'center', margin: '10px 0 0 0' }}>
+              We don't depend on middle layers, we work close to the source.
+            </p>
           </div>
         </div>
       ) : (
