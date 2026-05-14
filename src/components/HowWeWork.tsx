@@ -315,13 +315,13 @@ const HowWeWork: React.FC = () => {
           <div style={{
             display: 'flex',
             minHeight: '700px',
-            padding: '80px 8%',
+            padding: '0 8% 80px',
             backgroundColor: '#fff',
             gap: '10%',
             alignItems: 'center'
           }}>
             {/* Left: Process Pills */}
-            <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '46px', alignItems: 'center', zIndex: 10, paddingTop: '40px' }}>
+            <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '46px', alignItems: 'center', zIndex: 10, paddingTop: '0px' }}>
               {/* Pill 1 */}
               <div style={{ position: 'relative' }}>
                 <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>

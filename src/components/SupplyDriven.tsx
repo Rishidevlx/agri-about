@@ -28,7 +28,7 @@ const SupplyDriven: React.FC = () => {
           <div style={{
             position: 'relative',
             padding: '20px 16px 60px',
-            backgroundColor: '#FAFAFA',
+            backgroundColor: '#fff',
             display: 'flex',
             flexDirection: 'row-reverse',
             alignItems: 'flex-start',
@@ -109,7 +109,7 @@ const SupplyDriven: React.FC = () => {
           flexDirection: 'row-reverse',
           alignItems: 'center',
           padding: '0 8% 0 12%',
-          backgroundColor: '#FAFAFA'
+          backgroundColor: '#fff'
         }}>
           {/* Right side: Heading and Subtext (Now Right) */}
           <div style={{ flex: '0 0 55%', zIndex: 10, paddingLeft: '15%', paddingTop: '700px' }}>
