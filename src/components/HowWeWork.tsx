@@ -181,13 +181,13 @@ const HowWeWork: React.FC = () => {
             backgroundColor: '#fff'
           }}>
             {/* Left side: Heading and Subtext */}
-            <div style={{ flex: '0 0 55%', zIndex: 10, paddingTop: '100px' }}>
+            <div style={{ flex: '0 0 55%', zIndex: 10, paddingTop: '10px' }}>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                style={{ lineHeight: '0.7', marginBottom: '40px' }}
+                style={{ lineHeight: '0.7', marginBottom: '100px', marginTop: '-60px' }}
               >
                 <h3 style={{ fontFamily: FONT_HEADING, fontSize: '130px', fontWeight: 400, color: '#000', margin: 0 }}>Demand</h3>
                 <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: '64px', fontWeight: 400, color: '#000', margin: 0 }}>Driven</h4>
@@ -226,7 +226,6 @@ const HowWeWork: React.FC = () => {
                   backgroundColor: 'transparent',
                   borderRadius: '200px 0 200px 0',
                   border: `6px solid #333`,
-                  boxShadow: '0 40px 100px rgba(0,0,0,0.12)',
                   overflow: 'hidden',
                   zIndex: 10,
                   display: 'flex',
