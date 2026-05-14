@@ -270,15 +270,15 @@ const HowWeWork: React.FC = () => {
               </div>
 
               {/* Desktop Vertical Arrow (Longer) with Text */}
-              <div style={{ 
-                position: 'absolute', 
-                bottom: '-420px', 
-                left: '12%', 
-                width: '400px', 
-                display: 'flex', 
-                flexDirection: 'column', 
-                alignItems: 'center', 
-                zIndex: 10 
+              <div style={{
+                position: 'absolute',
+                bottom: '-420px',
+                left: '12%',
+                width: '400px',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                zIndex: 10
               }}>
                 <svg width="100" height="200" style={{ overflow: 'visible' }}>
                   {/* Decorative Circles */}
@@ -305,7 +305,7 @@ const HowWeWork: React.FC = () => {
                   }}
                 >
                   We don’t depend on middle layers, <br />
-                  we work close to the source.
+                  we work close to the source
                 </motion.p>
               </div>
             </div>
@@ -321,7 +321,7 @@ const HowWeWork: React.FC = () => {
             alignItems: 'center'
           }}>
             {/* Left: Process Pills */}
-            <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '46px', alignItems: 'center', zIndex: 10, paddingTop: '180px' }}>
+            <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '46px', alignItems: 'center', zIndex: 10, paddingTop: '40px' }}>
               {/* Pill 1 */}
               <div style={{ position: 'relative' }}>
                 <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
