@@ -178,8 +178,7 @@ const HowWeWork: React.FC = () => {
             display: 'flex',
             alignItems: 'center',
             padding: '0 5% 0 8%',
-            backgroundColor: '#fff',
-            marginTop: '-120px'
+            backgroundColor: '#fff'
           }}>
             {/* Left side: Heading and Subtext */}
             <div style={{ flex: '0 0 55%', zIndex: 10, paddingTop: '10px' }}>
@@ -273,7 +272,7 @@ const HowWeWork: React.FC = () => {
               {/* Desktop Vertical Arrow (Longer) with Text */}
               <div style={{
                 position: 'absolute',
-                bottom: '-180px',
+                bottom: '-420px',
                 left: '12%',
                 width: '400px',
                 display: 'flex',
