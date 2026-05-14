@@ -187,7 +187,7 @@ const HowWeWork: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                style={{ lineHeight: '0.7', marginBottom: '100px', marginTop: '-60px' }}
+                style={{ lineHeight: '0.7', marginBottom: '60px', marginTop: '-60px' }}
               >
                 <h3 style={{ fontFamily: FONT_HEADING, fontSize: '130px', fontWeight: 400, color: '#000', margin: 0 }}>Demand</h3>
                 <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: '64px', fontWeight: 400, color: '#000', margin: 0 }}>Driven</h4>
