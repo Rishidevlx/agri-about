@@ -2,7 +2,6 @@ import React from 'react';
 import { useIsMobile } from '../hooks/useIsMobile';
 
 const FONT_HEADING = "'Autography', cursive";
-const FONT_SUBHEADING = "'Bouncy', sans-serif";
 const FONT_CONTENT = "'TypoSlab Irregular Demo', serif";
 const YELLOW_ACCENT = '#FFDA44';
 
@@ -31,9 +30,9 @@ const OurTeam: React.FC = () => {
     <section style={{ backgroundColor: '#fff', padding: isMobile ? '40px 0 50px' : '70px 0 80px' }}>
 
       <h2 style={{
-        fontFamily: FONT_SUBHEADING,
+        fontFamily: 'Montserrat, sans-serif',
         fontSize: isMobile ? '32px' : '52px',
-        fontWeight: 400, textAlign: 'center', color: '#000',
+        fontWeight: 1000, textAlign: 'center', color: '#000',
         letterSpacing: '2px', marginBottom: isMobile ? '36px' : '60px',
       }}>
         OUR TEAM
@@ -72,9 +71,9 @@ const OurTeam: React.FC = () => {
       {/* CTA */}
       <div style={{ textAlign: 'center', padding: isMobile ? '0 16px' : '0 40px' }}>
         <h3 style={{
-          fontFamily: FONT_SUBHEADING,
+          fontFamily: 'Montserrat, sans-serif',
           fontSize: isMobile ? '22px' : '38px',
-          fontWeight: 400, color: YELLOW_ACCENT,
+          fontWeight: 900, color: YELLOW_ACCENT,
           lineHeight: '1.3', marginBottom: '16px',
         }}>
           Let's Build Global Trade Together

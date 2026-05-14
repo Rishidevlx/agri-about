@@ -4,7 +4,6 @@ import { useIsMobile } from '../hooks/useIsMobile';
 import { motion } from 'framer-motion';
 
 const FONT_HEADING = "'Autography', cursive";
-const FONT_SUBHEADING = "'Bouncy', sans-serif";
 const FONT_CONTENT = "'TypoSlab Irregular Demo', serif";
 const YELLOW_ACCENT = '#FFDA44';
 const BACKGROUND = '#FFFFFF';
@@ -16,9 +15,9 @@ const OurStrength: React.FC = () => {
     <section style={{ backgroundColor: BACKGROUND, padding: '0', overflow: 'hidden', marginTop: isMobile ? '-30px' : '-120px' }}>
 
       <h2 style={{
-        fontFamily: FONT_SUBHEADING,
+        fontFamily: 'Montserrat, sans-serif',
         fontSize: isMobile ? '32px' : '52px',
-        fontWeight: 400,
+        fontWeight: 900,
         textAlign: 'center',
         color: '#000',
         padding: isMobile ? '32px 0 24px' : '60px 0 50px',
@@ -28,7 +27,6 @@ const OurStrength: React.FC = () => {
       </h2>
 
       {isMobile ? (
-        /* ─ MOBILE LAYOUT ─ */
         <div style={{ padding: '0 16px 60px', position: 'relative', backgroundColor: BACKGROUND }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -38,18 +36,17 @@ const OurStrength: React.FC = () => {
           >
             <h3 style={{
               fontFamily: FONT_HEADING,
-              fontSize: '42px',
+              fontSize: '32px',
               fontWeight: 400,
               color: '#000',
-              lineHeight: '0.9',
+              lineHeight: '1.1',
               margin: 0
             }}>
-              Built on Ground <br /> Reality
+              Built on Ground Reality
             </h3>
           </motion.div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '30px', alignItems: 'center' }}>
-            {/* Image Section */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -59,32 +56,10 @@ const OurStrength: React.FC = () => {
               <img src={hww3} alt="Farmers" style={{ width: '100%', height: 'auto', borderRadius: '12px' }} />
             </motion.div>
 
-            {/* Quote directly below image (Mobile) */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              style={{
-                fontFamily: FONT_CONTENT,
-                fontSize: '15px',
-                color: YELLOW_ACCENT,
-                fontStyle: 'italic',
-                lineHeight: '1.3',
-                textAlign: 'center',
-                margin: '10px 0 0 0',
-                maxWidth: '95%',
-                whiteSpace: 'nowrap'
-              }}
-            >
-              "We don't depend on middle layers, we work close to the source."
-            </motion.p>
-
-            {/* Subtext */}
-            <p style={{ fontFamily: FONT_CONTENT, fontSize: '16px', color: '#333', lineHeight: '1.4', textAlign: 'center', margin: '10px 0 0 0', maxWidth: '90%' }}>
+            <p style={{ fontFamily: FONT_CONTENT, fontSize: '16px', color: '#333', lineHeight: '1.4', textAlign: 'center', margin: '0', maxWidth: '90%' }}>
               We are directly connected with multiple farmers, enabling:
             </p>
 
-            {/* Pills */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', width: '100%' }}>
               {[
                 { label: 'Better pricing control', bg: '#FFFDE0', color: '#000', align: 'flex-start' },
@@ -113,13 +88,29 @@ const OurStrength: React.FC = () => {
                 </div>
               ))}
             </div>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              style={{
+                fontFamily: FONT_CONTENT,
+                fontSize: '16px',
+                color: YELLOW_ACCENT,
+                lineHeight: '1.3',
+                textAlign: 'center',
+                margin: '40px 0 0 0',
+                maxWidth: 'none',
+                whiteSpace: 'nowrap'
+              }}
+            >
+              "We don't depend on middle layers, we work close to the source"
+            </motion.p>
           </div>
         </div>
       ) : (
-        /* ─ DESKTOP LAYOUT ─ */
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '0 60px 80px' }}>
-          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '80px', width: '100%', maxWidth: '1200px', marginBottom: '60px' }}>
-            {/* Left side: Heading and Image */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '80px', width: '100%', maxWidth: '1200px', marginBottom: '60px' }}>
             <div style={{ flex: '0 0 50%', display: 'flex', flexDirection: 'column' }}>
               <motion.h3
                 initial={{ opacity: 0, x: -30 }}
@@ -127,14 +118,15 @@ const OurStrength: React.FC = () => {
                 viewport={{ once: true }}
                 style={{
                   fontFamily: FONT_HEADING,
-                  fontSize: '80px',
+                  fontSize: '56px',
                   fontWeight: 400,
                   color: '#000',
-                  lineHeight: '0.8',
-                  marginBottom: '30px'
+                  lineHeight: '1',
+                  marginBottom: '20px',
+                  whiteSpace: 'nowrap'
                 }}
               >
-                Built on Ground <br /> Reality
+                Built on Ground Reality
               </motion.h3>
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -153,30 +145,9 @@ const OurStrength: React.FC = () => {
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </motion.div>
-              {/* Quote directly below image (Desktop) */}
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                style={{
-                  fontFamily: FONT_CONTENT,
-                  fontSize: '24px',
-                  fontWeight: 500,
-                  color: YELLOW_ACCENT,
-                  fontStyle: 'italic',
-                  lineHeight: '1.3',
-                  textAlign: 'left',
-                  marginTop: '25px',
-                  whiteSpace: 'nowrap',
-                  width: 'max-content'
-                }}
-              >
-                "We don't depend on middle layers, we work close to the source"
-              </motion.p>
             </div>
 
-            {/* Right side: Pills and Subtext */}
-            <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '100px' }}>
+            <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '100px', paddingLeft: '100px' }}>
               <p style={{
                 fontFamily: FONT_CONTENT,
                 fontSize: '28px',
@@ -187,40 +158,86 @@ const OurStrength: React.FC = () => {
               }}>
                 We are directly connected with multiple farmers, enabling:
               </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-                {[
-                  { label: 'Better pricing control', bg: '#FFFDE0', color: '#000' },
-                  { label: 'Quality consistency', bg: '#8A8A8A', color: '#fff' },
-                  { label: 'Reliable sourcing', bg: '#FFFDE0', color: '#000' },
-                ].map((p, i) => (
-                  <motion.div
-                    key={p.label}
-                    initial={{ opacity: 0, x: 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.1 * i }}
-                    style={{
-                      backgroundColor: p.bg,
-                      borderRadius: '20px',
-                      padding: '16px 40px',
-                      fontFamily: FONT_CONTENT,
-                      fontSize: '22px',
-                      fontWeight: 600,
-                      color: p.color,
-                      width: 'fit-content',
-                      cursor: 'pointer',
-                    }}
-                  >
-                    {p.label}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', position: 'relative' }}>
+                {/* Card 1 */}
+                <div style={{ position: 'relative' }}>
+                  <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+                    <ProcessCard bg="#FFFDE0" color="#000" title="Better pricing control" />
                   </motion.div>
-                ))}
+                  <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', left: 'calc(100% + 20px)', top: '45px', overflow: 'visible', zIndex: 1 }}>
+                    <circle cx="0" cy="0" r="5" fill="none" stroke="#000" strokeWidth="2" />
+                    <path d="M 5 0 L 40 0 C 80 0, 80 122, 40 122 L 0 122" stroke="#000" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M 15 107 L 0 122 L 15 137" stroke="#000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                  </svg>
+                </div>
+
+                {/* Card 2 */}
+                <div style={{ position: 'relative' }}>
+                  <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
+                    <ProcessCard bg="#808080" color="#fff" title="Quality consistency" />
+                  </motion.div>
+                  <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', right: 'calc(100% + 20px)', top: '45px', overflow: 'visible', zIndex: 1 }}>
+                    <circle cx="150" cy="0" r="5" fill="none" stroke="#000" strokeWidth="2" />
+                    <path d="M 145 0 L 110 0 C 70 0, 70 122, 110 122 L 150 122" stroke="#000" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M 135 107 L 150 122 L 135 137" stroke="#000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                  </svg>
+                </div>
+
+                {/* Card 3 */}
+                <div style={{ position: 'relative' }}>
+                  <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
+                    <ProcessCard bg="#FFFDE0" color="#000" title="Reliable sourcing" />
+                  </motion.div>
+                </div>
               </div>
             </div>
           </div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            style={{
+              fontFamily: FONT_CONTENT,
+              fontSize: '32px',
+              fontWeight: 500,
+              color: YELLOW_ACCENT,
+              lineHeight: '1.3',
+              textAlign: 'center',
+              marginTop: '20px',
+              maxWidth: 'none',
+              whiteSpace: 'nowrap'
+            }}
+          >
+            "We don't depend on middle layers, we work close to the source"
+          </motion.p>
         </div>
       )}
     </section>
   );
 };
+
+const ProcessCard: React.FC<{ bg: string; color: string; title: string }> = ({ bg, color, title }) => (
+  <motion.div
+    transition={{ duration: 0.4, ease: "easeOut" }}
+    style={{
+      backgroundColor: bg,
+      borderRadius: '24px',
+      width: '420px',
+      height: '90px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '0 20px',
+      boxShadow: '0 10px 25px rgba(0,0,0,0.05)',
+      cursor: 'pointer',
+      border: '1px solid rgba(0,0,0,0.05)',
+      position: 'relative',
+      zIndex: 2
+    }}
+  >
+    <span style={{ fontFamily: FONT_CONTENT, fontSize: '24px', fontWeight: 700, color, textAlign: 'center' }}>{title}</span>
+  </motion.div>
+);
 
 export default OurStrength;
