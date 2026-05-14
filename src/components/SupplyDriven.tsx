@@ -306,7 +306,6 @@ const Pill: React.FC<{ bg: string; color: string; children: React.ReactNode }> =
       fontWeight: 600,
       color,
       whiteSpace: 'nowrap',
-      boxShadow: '0 10px 25px rgba(0,0,0,0.05)',
       cursor: 'pointer',
       border: bg === '#FFDA44' ? 'none' : '1px solid #eee'
     }}
