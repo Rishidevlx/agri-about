@@ -26,26 +26,26 @@ const OurStrength: React.FC = () => {
       {isMobile ? (
         /* ─ MOBILE: layout matching screenshot ─ */
         <div style={{ padding: '0 16px 20px', position: 'relative' }}>
-          <div style={{ position: 'relative', height: '105px', width: '100%' }}>
-            <motion.h3 
+          <div style={{ position: 'relative', height: '100px', width: '100%' }}>
+            <motion.h3
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               style={{
-                fontFamily: SCRIPT, fontSize: '58px', fontWeight: 400,
+                fontFamily: SCRIPT, fontSize: '42px', fontWeight: 400,
                 color: '#000', lineHeight: '1', position: 'absolute', top: 0, width: '100%', textAlign: 'center', margin: 0
               }}
             >
-              Built on Ground
+              Built on
             </motion.h3>
-            <motion.h3 
+            <motion.h3
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
               style={{
-                fontFamily: SCRIPT, fontSize: '58px', fontWeight: 400,
-                color: '#000', lineHeight: '1', position: 'absolute', top: '45px', width: '100%', textAlign: 'center', margin: 0
+                fontFamily: SCRIPT, fontSize: '42px', fontWeight: 400,
+                color: '#000', lineHeight: '1', position: 'absolute', top: '42px', width: '100%', textAlign: 'center', margin: 0
               }}
             >
               Reality
@@ -54,9 +54,9 @@ const OurStrength: React.FC = () => {
 
           <div style={{ position: 'relative', width: '100%', minHeight: '240px' }}>
             {/* Left side: Image (Absolute to bottom left, independently scaled) */}
-            <motion.img 
-              src={hww3} 
-              alt="Farmers and team" 
+            <motion.img
+              src={hww3}
+              alt="Farmers and team"
               whileHover={{ scale: 1.05 }}
               transition={{ type: 'spring', stiffness: 300, damping: 15 }}
               style={{
@@ -68,7 +68,7 @@ const OurStrength: React.FC = () => {
                 height: 'auto',
                 zIndex: 1,
                 cursor: 'pointer'
-              }} 
+              }}
             />
 
             {/* Right side: Text and Pills (Absolute to right, vertically centered) */}
@@ -93,7 +93,7 @@ const OurStrength: React.FC = () => {
                   { label: 'Quality consistency', bg: '#8A8A8A', color: '#fff' },
                   { label: 'Reliable sourcing', bg: '#FFFDE0', color: '#000' },
                 ].map((p, i) => (
-                  <motion.div 
+                  <motion.div
                     key={p.label}
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -117,7 +117,7 @@ const OurStrength: React.FC = () => {
         /* ─ DESKTOP: two-column ─ */
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: '60px', padding: '0 60px 20px' }}>
           <div style={{ flex: '0 0 48%', display: 'flex', flexDirection: 'column' }}>
-            <motion.h3 
+            <motion.h3
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -125,12 +125,12 @@ const OurStrength: React.FC = () => {
             >
               Built on Ground Reality
             </motion.h3>
-            <motion.img 
-              src={hww3} 
-              alt="Farmers and team" 
+            <motion.img
+              src={hww3}
+              alt="Farmers and team"
               whileHover={{ scale: 1.03 }}
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-              style={{ width: '100%', height: '560px', objectFit: 'cover', objectPosition: 'top center', borderRadius: '12px', cursor: 'pointer' }} 
+              style={{ width: '100%', height: '560px', objectFit: 'cover', objectPosition: 'top center', borderRadius: '12px', cursor: 'pointer' }}
             />
           </div>
           <div style={{ flex: 1, paddingTop: '20px' }}>
@@ -142,7 +142,7 @@ const OurStrength: React.FC = () => {
               { label: 'Quality consistency', bg: '#8A8A8A', color: '#fff' },
               { label: 'Reliable sourcing', bg: '#FFFDE0', color: '#000' },
             ].map((p, i) => (
-              <motion.div 
+              <motion.div
                 key={p.label}
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}

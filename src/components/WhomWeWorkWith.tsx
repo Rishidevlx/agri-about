@@ -14,7 +14,7 @@ const MARKER_ID = 'openArrow';
 const L = (p: { x1:number; y1:number; x2:number; y2:number }) => (
   <line
     x1={p.x1} y1={p.y1} x2={p.x2} y2={p.y2}
-    stroke="#000" strokeWidth="1.6"
+    stroke="#000" strokeWidth="1.0"
     markerEnd={`url(#${MARKER_ID})`}
   />
 );
@@ -77,7 +77,7 @@ const WhomWeWorkWith: React.FC = () => {
               d="M 0 0 L 10 5 L 0 10"
               fill="none"
               stroke="#000"
-              strokeWidth="1.8"
+              strokeWidth="1.2"
               strokeLinejoin="round"
               strokeLinecap="round"
             />
