@@ -27,7 +27,7 @@ const SupplyDriven: React.FC = () => {
           {/* Mobile Header: Side-by-Side (Full Width Fix) */}
           <div style={{
             position: 'relative',
-            padding: '20px 16px 60px',
+            padding: '0 16px 60px',
             backgroundColor: '#fff',
             display: 'flex',
             flexDirection: 'row-reverse',
@@ -44,7 +44,7 @@ const SupplyDriven: React.FC = () => {
                 style={{ lineHeight: '0.8', marginBottom: '12px' }}
               >
                 <h3 style={{ fontFamily: FONT_HEADING, fontSize: '36px', fontWeight: 400, color: '#000', margin: 0 }}>Supply</h3>
-                <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: '22px', fontWeight: 400, color: '#000', margin: 0 }}>Driven</h4>
+                                <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: '22px', fontWeight: 400, color: '#FFDA44', margin: 0 }}>Driven</h4>
               </motion.div>
               <p style={{ fontFamily: FONT_CONTENT, fontSize: '11px', color: '#333', lineHeight: '1.3', margin: 0 }}>
                 Leveraging our wide farmer network to provide:
@@ -109,10 +109,11 @@ const SupplyDriven: React.FC = () => {
           flexDirection: 'row-reverse',
           alignItems: 'center',
           padding: '0 8% 0 12%',
-          backgroundColor: '#fff'
+          backgroundColor: '#fff',
+          marginTop: '-250px'
         }}>
           {/* Right side: Heading and Subtext (Now Right) */}
-          <div style={{ flex: '0 0 55%', zIndex: 10, paddingLeft: '15%', paddingTop: '700px' }}>
+          <div style={{ flex: '0 0 55%', zIndex: 10, paddingLeft: '15%', paddingTop: '0px' }}>
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -120,7 +121,7 @@ const SupplyDriven: React.FC = () => {
               style={{ marginBottom: '20px' }}
             >
               <h3 style={{ fontFamily: FONT_HEADING, fontSize: '110px', fontWeight: 400, color: '#000', margin: 0, lineHeight: 0.9 }}>Supply</h3>
-              <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: '68px', fontWeight: 400, color: '#000', margin: 0 }}>Driven</h4>
+                            <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: '68px', fontWeight: 400, color: '#FFDA44', margin: 0 }}>Driven</h4>
             </motion.div>
             <motion.p
               initial={{ opacity: 0, x: -30 }}
@@ -150,12 +151,11 @@ const SupplyDriven: React.FC = () => {
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
               style={{
                 position: 'relative',
-                width: '550px',
-                height: '550px',
+                width: '400px',
+                height: '400px',
                 backgroundColor: 'transparent',
                 borderRadius: '200px 0 200px 0',
-                border: `10px solid #3b3c36`,
-                boxShadow: '0 25px 60px rgba(0,0,0,0.12)',
+                border: `6px solid #3b3c36`,
                 overflow: 'hidden',
                 display: 'flex',
                 justifyContent: 'center',
@@ -179,7 +179,7 @@ const SupplyDriven: React.FC = () => {
             </motion.div>
 
             {/* Desktop Vertical Arrow (Sharp HowWeWork Style) */}
-            <svg width="100" height="200" viewBox="0 0 100 200" style={{ position: 'absolute', bottom: '-200px', left: '50%', transform: 'translateX(-50%)', zIndex: 1, overflow: 'visible' }}>
+            <svg width="100" height="200" viewBox="0 0 100 200" style={{ position: 'absolute', bottom: '-200px', left: '42%', transform: 'translateX(-50%)', zIndex: 1, overflow: 'visible' }}>
               {/* Decorative Circles */}
               <circle cx="50" cy="130" r="40" stroke="#eee" strokeWidth="1.5" fill="none" />
               <circle cx="50" cy="130" r="60" stroke="#f5f5f5" strokeWidth="1.5" fill="none" />
@@ -245,14 +245,14 @@ const SupplyDriven: React.FC = () => {
         /* ─ DESKTOP: Restored side-by-side Layout ─ */
         <div style={{
           display: 'flex',
-          minHeight: '700px',
-          padding: '80px 8%',
+          minHeight: '750px',
+          padding: '0 8% 80px',
           backgroundColor: '#fff',
           gap: '10%',
           alignItems: 'center'
         }}>
           {/* Left: Process Pills */}
-          <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '46px', alignItems: 'center', zIndex: 10 }}>
+          <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '46px', alignItems: 'center', zIndex: 10, position: 'relative', top: '-110px' }}>
             {/* Pill 1 */}
             <div style={{ position: 'relative' }}>
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
@@ -268,7 +268,7 @@ const SupplyDriven: React.FC = () => {
             {/* Pill 2 */}
             <div style={{ position: 'relative' }}>
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
-                <Pill bg="#FFDA44" color="#fff">Competitive pricing</Pill>
+                <Pill bg="#808080" color="#fff">Competitive pricing</Pill>
               </motion.div>
               <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', left: 'calc(100% + 15px)', top: '24px', overflow: 'visible', zIndex: 1 }}>
                 <circle cx="0" cy="0" r="5" fill="none" stroke="#000" strokeWidth="2" />

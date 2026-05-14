@@ -31,6 +31,8 @@ const HowWeWork: React.FC = () => {
         textAlign: 'center', color: '#000',
         padding: isMobile ? '40px 0 24px' : '60px 0 40px',
         letterSpacing: '-1px',
+        position: 'relative',
+        zIndex: 100
       }}>
         How we work
       </h2>
@@ -56,7 +58,7 @@ const HowWeWork: React.FC = () => {
                 style={{ lineHeight: '0.8', marginBottom: '12px' }}
               >
                 <h3 style={{ fontFamily: FONT_HEADING, fontSize: '36px', fontWeight: 400, color: '#000', margin: 0 }}>Demand</h3>
-                <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: '22px', fontWeight: 400, color: '#000', margin: 0 }}>Driven</h4>
+                                                <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: '22px', fontWeight: 400, color: '#FFDA44', margin: 0 }}>Driven</h4>
               </motion.div>
 
               <motion.p
@@ -178,10 +180,11 @@ const HowWeWork: React.FC = () => {
             display: 'flex',
             alignItems: 'center',
             padding: '0 5% 0 8%',
-            backgroundColor: '#fff'
+            backgroundColor: '#fff',
+            marginTop: '-100px'
           }}>
             {/* Left side: Heading and Subtext */}
-            <div style={{ flex: '0 0 55%', zIndex: 10, paddingTop: '10px' }}>
+            <div style={{ flex: '0 0 55%', zIndex: 10, paddingTop: '0px' }}>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -190,7 +193,7 @@ const HowWeWork: React.FC = () => {
                 style={{ lineHeight: '0.7', marginBottom: '60px', marginTop: '-60px' }}
               >
                 <h3 style={{ fontFamily: FONT_HEADING, fontSize: '130px', fontWeight: 400, color: '#000', margin: 0 }}>Demand</h3>
-                <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: '64px', fontWeight: 400, color: '#000', margin: 0 }}>Driven</h4>
+                                <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: '64px', fontWeight: 400, color: '#FFDA44', margin: 0 }}>Driven</h4>
               </motion.div>
 
               <motion.p
@@ -221,8 +224,8 @@ const HowWeWork: React.FC = () => {
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 style={{
                   position: 'relative',
-                  width: '480px',
-                  height: '480px',
+                  width: '400px',
+                  height: '400px',
                   backgroundColor: 'transparent',
                   borderRadius: '200px 0 200px 0',
                   border: `6px solid #333`,
@@ -272,7 +275,7 @@ const HowWeWork: React.FC = () => {
               {/* Desktop Vertical Arrow (Longer) with Text */}
               <div style={{
                 position: 'absolute',
-                bottom: '-420px',
+                bottom: '-350px',
                 left: '12%',
                 width: '400px',
                 display: 'flex',
@@ -280,13 +283,13 @@ const HowWeWork: React.FC = () => {
                 alignItems: 'center',
                 zIndex: 10
               }}>
-                <svg width="100" height="200" style={{ overflow: 'visible' }}>
+                <svg width="100" height="250" style={{ overflow: 'visible' }}>
                   {/* Decorative Circles */}
-                  <circle cx="50" cy="130" r="40" stroke="#eee" strokeWidth="1.5" fill="none" />
-                  <circle cx="50" cy="130" r="60" stroke="#f5f5f5" strokeWidth="1.5" fill="none" />
+                  <circle cx="50" cy="180" r="40" stroke="#eee" strokeWidth="1.5" fill="none" />
+                  <circle cx="50" cy="180" r="60" stroke="#f5f5f5" strokeWidth="1.5" fill="none" />
 
-                  <line x1="50" y1="0" x2="50" y2="130" stroke="#000" strokeWidth="2" strokeLinecap="round" />
-                  <path d="M 35 110 L 50 130 L 65 110" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                  <line x1="50" y1="0" x2="50" y2="180" stroke="#000" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M 35 160 L 50 180 L 65 160" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                 </svg>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
@@ -314,14 +317,14 @@ const HowWeWork: React.FC = () => {
           {/* ─ DESKTOP STEPS BLOCK (Restored Layout) ─ */}
           <div style={{
             display: 'flex',
-            minHeight: '700px',
-            padding: '0 8% 80px',
+            minHeight: '520px',
+            padding: '0 8% 0',
             backgroundColor: '#fff',
             gap: '10%',
             alignItems: 'center'
           }}>
             {/* Left: Process Pills */}
-            <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '46px', alignItems: 'center', zIndex: 10, paddingTop: '0px' }}>
+            <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '46px', alignItems: 'center', zIndex: 10, position: 'relative', top: '-180px' }}>
               {/* Pill 1 */}
               <div style={{ position: 'relative' }}>
                 <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
@@ -337,7 +340,7 @@ const HowWeWork: React.FC = () => {
               {/* Pill 2 */}
               <div style={{ position: 'relative' }}>
                 <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
-                  <Pill bg="#FFDA44" color="#fff">Organic / Conventional farming</Pill>
+                  <Pill bg="#808080" color="#fff">Organic / Conventional farming</Pill>
                 </motion.div>
                 <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', right: 'calc(100% + 15px)', top: '24px', overflow: 'visible', zIndex: 1 }}>
                   <circle cx="150" cy="0" r="5" fill="none" stroke="#000" strokeWidth="2" />
