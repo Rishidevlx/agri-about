@@ -31,12 +31,12 @@ const SupplyDriven: React.FC = () => {
             backgroundColor: '#FAFAFA',
             display: 'flex',
             flexDirection: 'row-reverse',
-            alignItems: 'center',
+            alignItems: 'flex-start',
             gap: '10px',
             width: '100%',
             boxSizing: 'border-box'
           }}>
-            <div style={{ flex: '0 0 55%', zIndex: 10 }}>
+            <div style={{ flex: '0 0 55%', zIndex: 10, paddingTop: '120px' }}>
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
