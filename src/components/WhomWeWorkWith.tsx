@@ -146,12 +146,6 @@ const WhomWeWorkWith: React.FC = () => {
         <L x1={bX+gRx} y1={mY} x2={bX+gRx+85} y2={mY}/>
         <Lbl x={bX+gRx+93} y={mY} text="Importers" a="start"/>
 
-        {/* ══════════════════════════════════════
-            SINGLE: ↑ Corporates above BUYERS
-            Draw from buyer-top upward (↑)
-        ══════════════════════════════════════ */}
-        <L x1={bX} y1={mY-gRy} x2={bX} y2={mY-gRy-85}/>
-        <Lbl x={bX} y={mY-gRy-100} text="Corporates"/>
 
         {/* ══════════════════════════════════════
             LOCAL FARMERS — 3 diagonal arrows downward
