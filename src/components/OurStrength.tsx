@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const SCRIPT = "'Great Vibes', 'Sacramento', cursive";
 const HAND = "'Patrick Hand', 'Caveat', cursive";
-const YELLOW = '#FFDA44';
+const YELLOW = '#FFFF';
 
 const OurStrength: React.FC = () => {
   const isMobile = useIsMobile();
