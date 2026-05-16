@@ -98,13 +98,13 @@ const SupplyDriven: React.FC = () => {
           position: 'relative',
           left: '50%',
           transform: 'translateX(-50%)',
-          height: '650px',
+          height: 'clamp(450px, 33.85vw, 650px)',
           display: 'flex',
           flexDirection: 'row-reverse',
           alignItems: 'center',
           padding: '0 8% 0 12%',
           backgroundColor: '#fff',
-          marginTop: '-250px'
+          marginTop: 'clamp(-250px, -13vw, -100px)'
         }}>
           <div style={{ flex: '0 0 55%', zIndex: 10, paddingLeft: '5%', paddingTop: '0px', marginTop: '-19px' }}>
             <motion.div
@@ -113,8 +113,8 @@ const SupplyDriven: React.FC = () => {
               viewport={{ once: true }}
               style={{ marginBottom: '50px', marginTop: '-50px' }}
             >
-              <h3 style={{ fontFamily: FONT_HEADING, fontSize: '110px', fontWeight: 400, color: '#000', margin: 0, lineHeight: 0.9 }}>Supply</h3>
-              <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: '68px', fontWeight: 400, color: '#FFDA44', margin: 0 }}>Driven</h4>
+              <h3 style={{ fontFamily: FONT_HEADING, fontSize: 'clamp(72px, 7.3vw, 110px)', fontWeight: 400, color: '#000', margin: 0, lineHeight: 0.9 }}>Supply</h3>
+              <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: 'clamp(44px, 4.5vw, 68px)', fontWeight: 400, color: '#FFDA44', margin: 0 }}>Driven</h4>
             </motion.div>
             <motion.p
               initial={{ opacity: 0, x: -30 }}
@@ -123,10 +123,10 @@ const SupplyDriven: React.FC = () => {
               transition={{ delay: 0.2 }}
               style={{
                 fontFamily: FONT_CONTENT,
-                fontSize: '22px',
+                fontSize: 'clamp(15px, 1.4vw, 22px)',
                 color: '#333',
                 lineHeight: '1.6',
-                maxWidth: '540px',
+                maxWidth: 'clamp(340px, 34vw, 540px)',
                 margin: 0
               }}
             >
@@ -142,10 +142,10 @@ const SupplyDriven: React.FC = () => {
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
               style={{
                 position: 'relative',
-                width: '400px',
-                height: '400px',
+                width: 'clamp(260px, 24vw, 400px)',
+                height: 'clamp(260px, 24vw, 400px)',
                 backgroundColor: 'transparent',
-                borderRadius: '200px 0 200px 0',
+                borderRadius: 'clamp(130px, 12.5vw, 200px) 0 clamp(130px, 12.5vw, 200px) 0',
                 border: `6px solid #3b3c36`,
                 overflow: 'hidden',
                 display: 'flex',
@@ -168,11 +168,11 @@ const SupplyDriven: React.FC = () => {
                 <img src={hww2} alt="Farmer" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
             </motion.div>
-            <svg width="100" height="200" viewBox="0 0 100 200" style={{ position: 'absolute', bottom: '-200px', left: '42%', transform: 'translateX(-50%)', zIndex: 1, overflow: 'visible' }}>
-              <circle cx="50" cy="130" r="40" stroke="#eee" strokeWidth="1.5" fill="none" />
-              <circle cx="50" cy="130" r="60" stroke="#f5f5f5" strokeWidth="1.5" fill="none" />
-              <line x1="50" y1="0" x2="50" y2="130" stroke="#000" strokeWidth="2" strokeLinecap="round" />
-              <path d="M 35 110 L 50 130 L 65 110" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            <svg width="100" height="220" viewBox="0 0 100 220" style={{ position: 'absolute', bottom: 'clamp(-220px, -11.46vw, -155px)', left: '42%', transform: 'translateX(-50%)', zIndex: 1, overflow: 'visible' }}>
+              <line x1="50" y1="0" x2="50" y2="150" stroke="#000" strokeWidth="2" strokeLinecap="round" />
+              <path d="M 35 130 L 50 150 L 65 130" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+              <circle cx="50" cy="150" r="40" stroke="#eee" strokeWidth="1.5" fill="none" />
+              <circle cx="50" cy="150" r="60" stroke="#f5f5f5" strokeWidth="1.5" fill="none" />
             </svg>
           </div>
         </div>
@@ -223,13 +223,13 @@ const SupplyDriven: React.FC = () => {
       ) : (
         <div style={{
           display: 'flex',
-          minHeight: '750px',
+          minHeight: 'clamp(500px, 46.9vw, 750px)',
           padding: '0 8% 80px',
           backgroundColor: '#fff',
           gap: '10%',
           alignItems: 'center'
         }}>
-          <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '46px', alignItems: 'center', zIndex: 10, position: 'relative', top: '-150px', marginLeft: '630px' }}>
+          <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: 'clamp(28px, 3vw, 46px)', alignItems: 'center', zIndex: 10, position: 'relative', top: 'clamp(-110px, -7.8vw, -60px)', marginLeft: 'clamp(430px, 37.6vw, 730px)' }}>
             <div style={{ position: 'relative' }}>
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
                 <ProcessCard bg="#FFFDE0" color="#000" title="Export Quality Products" />
@@ -271,8 +271,8 @@ const ProcessCard: React.FC<{ bg: string; color: string; title: string }> = ({ b
     style={{
       backgroundColor: bg,
       borderRadius: '24px',
-      width: '420px',
-      height: '90px',
+      width: 'clamp(260px, 26.25vw, 420px)',
+      height: 'clamp(65px, 5.625vw, 90px)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -284,7 +284,7 @@ const ProcessCard: React.FC<{ bg: string; color: string; title: string }> = ({ b
       zIndex: 2
     }}
   >
-    <span style={{ fontFamily: FONT_CONTENT, fontSize: '24px', fontWeight: 700, color, textAlign: 'center' }}>{title}</span>
+    <span style={{ fontFamily: FONT_CONTENT, fontSize: 'clamp(15px, 1.5vw, 24px)', fontWeight: 700, color, textAlign: 'center' }}>{title}</span>
   </motion.div>
 );
 

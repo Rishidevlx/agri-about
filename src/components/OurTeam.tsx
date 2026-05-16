@@ -9,18 +9,18 @@ const YELLOW_ACCENT = '#FFDA44';
 const BrushCircle: React.FC<{ size?: number }> = ({ size = 220 }) => (
   <svg width={size} height={size} viewBox="0 0 220 220" fill="none">
     <path d="M110,22 C148,18 192,48 202,88 C215,140 185,190 138,204 C90,218 42,192 26,148 C10,104 30,52 72,32 C88,25 98,22 110,22 Z"
-      stroke={YELLOW_ACCENT} strokeWidth="9" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.9"/>
+      stroke={YELLOW_ACCENT} strokeWidth="9" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.9" />
     <path d="M110,34 C144,30 182,56 194,94 C207,138 180,182 138,196 C96,210 52,186 38,148 C22,106 44,60 82,42 C94,36 102,34 110,34 Z"
-      stroke={YELLOW_ACCENT} strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.55"/>
+      stroke={YELLOW_ACCENT} strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.55" />
     <path d="M110,46 C140,42 172,64 184,98 C198,136 174,174 138,188 C100,202 60,180 48,148 C34,110 56,68 90,52 C98,48 104,46 110,46 Z"
-      stroke={YELLOW_ACCENT} strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.3"/>
+      stroke={YELLOW_ACCENT} strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.3" />
   </svg>
 );
 
 const members = [
-  { name: 'Dinesh Kanna',   role: 'Founder'    },
+  { name: 'Dinesh Kanna', role: 'Founder' },
   { name: 'Annie Baskaran', role: 'Co-Founder' },
-  { name: 'Naveen Kumar',   role: 'Co-Founder' },
+  { name: 'Naveen Kumar', role: 'Co-Founder' },
 ];
 
 const OurTeam: React.FC = () => {
@@ -54,7 +54,7 @@ const OurTeam: React.FC = () => {
             <div style={{ width: isMobile ? '140px' : '220px', height: isMobile ? '140px' : '220px', margin: '0 auto 12px' }}>
               <BrushCircle size={isMobile ? 140 : 220} />
             </div>
-                        <p style={{
+            <p style={{
               fontFamily: FONT_CONTENT,
               fontSize: isMobile ? '18px' : '26px',
               fontWeight: 700, color: '#000', marginBottom: '2px',

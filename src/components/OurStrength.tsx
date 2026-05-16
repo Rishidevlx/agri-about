@@ -110,7 +110,7 @@ const OurStrength: React.FC = () => {
         </div>
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '0 60px 80px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '80px', width: '100%', maxWidth: '1200px', marginBottom: '60px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 'clamp(30px, 4.2vw, 80px)', width: '100%', maxWidth: '1200px', marginBottom: '60px' }}>
             <div style={{ flex: '0 0 50%', display: 'flex', flexDirection: 'column' }}>
               <motion.h3
                 initial={{ opacity: 0, x: -30 }}
@@ -118,7 +118,7 @@ const OurStrength: React.FC = () => {
                 viewport={{ once: true }}
                 style={{
                   fontFamily: FONT_HEADING,
-                  fontSize: '56px',
+                  fontSize: 'clamp(36px, 3.5vw, 56px)',
                   fontWeight: 400,
                   color: '#000',
                   lineHeight: '1',
@@ -134,7 +134,7 @@ const OurStrength: React.FC = () => {
                 viewport={{ once: true }}
                 style={{
                   width: '100%',
-                  height: '500px',
+                  height: 'clamp(320px, 31.25vw, 500px)',
                   borderRadius: '12px',
                   overflow: 'hidden',
                 }}
@@ -147,10 +147,10 @@ const OurStrength: React.FC = () => {
               </motion.div>
             </div>
 
-            <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '100px', paddingLeft: '100px' }}>
+            <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: 'clamp(40px, 6.25vw, 100px)', paddingLeft: 'clamp(40px, 6.25vw, 100px)' }}>
               <p style={{
                 fontFamily: FONT_CONTENT,
-                fontSize: '28px',
+                fontSize: 'clamp(18px, 1.75vw, 28px)',
                 fontWeight: 400,
                 color: '#333',
                 lineHeight: '1.4',
@@ -160,11 +160,11 @@ const OurStrength: React.FC = () => {
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', position: 'relative' }}>
                 {/* Card 1 */}
-                <div style={{ position: 'relative' }}>
+                <div style={{ position: 'relative', width: 'fit-content' }}>
                   <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
                     <ProcessCard bg="#FFFDE0" color="#000" title="Better pricing control" />
                   </motion.div>
-                  <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', left: 'calc(100% + 20px)', top: '45px', overflow: 'visible', zIndex: 1 }}>
+                  <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', left: 'calc(100% + 10px)', top: '40px', overflow: 'visible', zIndex: 1 }}>
                     <circle cx="0" cy="0" r="5" fill="none" stroke="#000" strokeWidth="2" />
                     <path d="M 5 0 L 40 0 C 80 0, 80 122, 40 122 L 0 122" stroke="#000" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M 15 107 L 0 122 L 15 137" stroke="#000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
@@ -199,7 +199,7 @@ const OurStrength: React.FC = () => {
             viewport={{ once: true }}
             style={{
               fontFamily: FONT_CONTENT,
-              fontSize: '32px',
+              fontSize: 'clamp(20px, 2vw, 32px)',
               fontWeight: 500,
               color: YELLOW_ACCENT,
               lineHeight: '1.3',
@@ -223,8 +223,8 @@ const ProcessCard: React.FC<{ bg: string; color: string; title: string }> = ({ b
     style={{
       backgroundColor: bg,
       borderRadius: '24px',
-      width: '420px',
-      height: '90px',
+      width: 'clamp(260px, 26.25vw, 420px)',
+      height: 'clamp(65px, 5.625vw, 90px)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -236,7 +236,7 @@ const ProcessCard: React.FC<{ bg: string; color: string; title: string }> = ({ b
       zIndex: 2
     }}
   >
-    <span style={{ fontFamily: FONT_CONTENT, fontSize: '24px', fontWeight: 700, color, textAlign: 'center' }}>{title}</span>
+    <span style={{ fontFamily: FONT_CONTENT, fontSize: 'clamp(15px, 1.5vw, 24px)', fontWeight: 700, color, textAlign: 'center' }}>{title}</span>
   </motion.div>
 );
 
