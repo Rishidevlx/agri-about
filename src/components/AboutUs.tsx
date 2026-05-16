@@ -27,12 +27,12 @@ const AboutUs: React.FC = () => {
             style={{ width: '80%', maxWidth: '280px', height: 'auto' }} />
 
           {/* Yellow card full width */}
-          <div style={{ width: '100%', backgroundColor: '#FFDA44', borderRadius: '20px', padding: '28px 24px' }}>
+          <div style={{ width: '100%', backgroundColor: '#808080', borderRadius: '20px', padding: '28px 24px' }}>
             <p style={{
               fontFamily: 'Inter, sans-serif', fontSize: '15px', fontWeight: 700,
               lineHeight: '1.8', color: '#ffffff', textAlign: 'justify',
             }}>
-              <span style={{ fontWeight: 900, color: '#000000' }}>Pact Ventures</span>{' '}
+              <span style={{ fontWeight: 900, color: '#FFDA44' }}>X Pact Ventures</span>{' '}
               is a dynamic export-import company based in Tamil Nadu, South India. We specialize in
               exporting high-quality agricultural products by collaborating with local farmers and
               trusted international traders, delivering the richness of Indian products to global markets.
@@ -49,9 +49,9 @@ const AboutUs: React.FC = () => {
           <div style={{ flex: '0 0 520px' }}>
             <img src={xLogo} alt="Pact Ventures X Logo" style={{ width: '520px', height: 'auto', display: 'block' }} />
           </div>
-          <div style={{ flex: '1', backgroundColor: '#FFDA44', borderRadius: '28px', padding: '44px 50px' }}>
+          <div style={{ flex: '1', backgroundColor: '#808080', borderRadius: '28px', padding: '44px 50px' }}>
             <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '18px', fontWeight: 700, lineHeight: '1.85', color: '#ffffff', textAlign: 'justify' }}>
-              <span style={{ fontWeight: 900, color: '#000000' }}>X Pact Ventures</span>{' '}
+              <span style={{ fontWeight: 900, color: '#FFDA44' }}>X Pact Ventures</span>{' '}
               is a dynamic export-import company based in Tamil Nadu, South India. We specialize in
               exporting high-quality agricultural products by collaborating with local farmers and trusted
               international traders, delivering the richness of Indian products to global markets. At the

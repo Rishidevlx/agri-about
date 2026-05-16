@@ -1,6 +1,5 @@
 import React from 'react';
 import hww1 from '../assets/HWW 1.png';
-import { useIsMobile } from '../hooks/useIsMobile';
 import { motion } from 'framer-motion';
 
 const FONT_HEADING = "'Autography', cursive";
@@ -8,7 +7,6 @@ const FONT_SUBHEADING = "'Bouncy', sans-serif";
 const FONT_CONTENT = "'TypoSlab Irregular Demo', serif";
 
 const HowWeWork: React.FC = () => {
-  const isMobile = useIsMobile();
 
   return (
     <section style={{ backgroundColor: '#fff', padding: '0', overflow: 'hidden' }}>
@@ -24,12 +22,12 @@ const HowWeWork: React.FC = () => {
       </svg>
 
       {/* ── TITLE ── */}
-      <h2 style={{
+      <h2 className="how-we-work-heading" style={{
         fontFamily: 'Montserrat, sans-serif',
-        fontSize: isMobile ? '36px' : '52px',
+        fontSize: '52px',
         fontWeight: 800,
         textAlign: 'center', color: '#000',
-        padding: isMobile ? '40px 0 24px' : '60px 0 40px',
+        padding: '20px 0 10px',
         letterSpacing: '-1px',
         position: 'relative',
         zIndex: 100
@@ -37,132 +35,138 @@ const HowWeWork: React.FC = () => {
         How we work
       </h2>
 
-      {/* ══ MOBILE LAYOUT ══ */}
-      {isMobile ? (
-        <div style={{ position: 'relative' }}>
-          <div style={{
-            padding: '20px 16px 60px',
-            backgroundColor: '#fff',
-            position: 'relative',
-            display: 'flex',
-            alignItems: 'flex-start',
-            gap: '10px',
-            width: '100%',
-            boxSizing: 'border-box'
-          }}>
-            <div style={{ flex: '0 0 55%', zIndex: 10, paddingTop: '120px' }}>
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                style={{ lineHeight: '0.8', marginBottom: '12px' }}
-              >
-                <h3 style={{ fontFamily: FONT_HEADING, fontSize: '36px', fontWeight: 400, color: '#000', margin: 0 }}>Demand</h3>
-                <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: '22px', fontWeight: 400, color: '#FFDA44', margin: 0 }}>Driven</h4>
-              </motion.div>
-
-              <motion.p
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                style={{ fontFamily: FONT_CONTENT, fontSize: '12px', color: '#333', lineHeight: '1.4', margin: 0 }}
-              >
-                We cultivate and source products based on buyer requirements:
-              </motion.p>
-            </div>
-
-            <div style={{ flex: '0 0 45%', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                viewport={{ once: true }}
-                style={{
-                  position: 'relative',
-                  width: '120px',
-                  height: '120px',
-                  backgroundColor: 'transparent',
-                  borderRadius: '40px 0 40px 0',
-                  boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
-                  padding: '2px',
-                  zIndex: 2,
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  border: `3px solid #3b3c36`,
-                  cursor: 'pointer'
-                }}
-              >
-                <div style={{
-                  width: '100%',
-                  height: '100%',
-                  backgroundColor: 'transparent',
-                  borderRadius: '35px 0 35px 0',
-                  overflow: 'hidden',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center'
-                }}>
-                  <img src={hww1} alt="Farmers" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+      {/* ══ MOBILE LA      {/* ══ MOBILE LAYOUT ══ */}
+      <div className="mobile-only-view">
+        <div style={{ width: '100%', display: 'flex', justifyContent: 'center', overflow: 'hidden', height: '380px' }}>
+          <div style={{ width: '1100px', transform: 'scale(0.32)', transformOrigin: 'top center', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '30px' }}>
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '160px', width: '100%', maxWidth: '1000px' }}>
+              
+              {/* LEFT SIDE: Text and Cards */}
+              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', paddingTop: '20px', paddingLeft: '40px' }}>
+                <div style={{ marginBottom: '100px' }}>
+                  <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                  >
+                    <h3 style={{ fontFamily: FONT_HEADING, fontSize: '110px', fontWeight: 400, color: '#000', margin: 0, lineHeight: 0.9 }}>Demand</h3>
+                    <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: '80px', fontWeight: 400, color: '#FFDA44', margin: 0 }}>Driven</h4>
+                  </motion.div>
+                  <motion.p
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2 }}
+                    style={{
+                      fontFamily: FONT_CONTENT,
+                      fontSize: '38px',
+                      color: '#333',
+                      lineHeight: '1.6',
+                      marginTop: '30px',
+                      maxWidth: '450px'
+                    }}
+                  >
+                    We cultivate and source products based on buyer requirements:
+                  </motion.p>
                 </div>
-              </motion.div>
 
-              {/* Mobile Vertical Arrow (Longer) */}
-              <svg width="40" height="110" viewBox="0 0 60 110" style={{ position: 'absolute', bottom: '-110px', left: '50%', transform: 'translateX(-50%)', zIndex: 1, overflow: 'visible' }}>
-                {/* Decorative Circles */}
-                <circle cx="30" cy="80" r="22" stroke="#f0f0f0" strokeWidth="1" fill="none" />
-                <circle cx="30" cy="80" r="32" stroke="#f8f8f8" strokeWidth="1" fill="none" />
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '80px', position: 'relative' }}>
+                  <div style={{ position: 'relative' }}>
+                    <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+                      <ProcessCardFixed bg="#FFFDE0" color="#000" title="Specific soil selection" />
+                    </motion.div>
+                    <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', left: 'calc(100% + 30px)', top: '40px', overflow: 'visible', zIndex: 1 }}>
+                      <circle cx="0" cy="0" r="5" fill="none" stroke="#000" strokeWidth="2" />
+                      <path d="M 5 0 L 40 0 C 80 0, 80 120, 40 120 L 0 120" stroke="#000" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M 15 105 L 0 120 L 15 135" stroke="#000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    </svg>
+                  </div>
+                  
+                  <div style={{ position: 'relative' }}>
+                    <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
+                      <ProcessCardFixed bg="#808080" color="#fff" title="Organic / Conventional farming" height="100px" />
+                    </motion.div>
+                    <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', right: 'calc(100% + 30px)', top: '40px', overflow: 'visible', zIndex: 1 }}>
+                      <circle cx="150" cy="0" r="5" fill="none" stroke="#000" strokeWidth="2" />
+                      <path d="M 145 0 L 110 0 C 70 0, 70 120, 110 120 L 150 120" stroke="#000" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M 135 105 L 150 120 L 135 135" stroke="#000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    </svg>
+                  </div>
 
-                <line x1="30" y1="0" x2="30" y2="80" stroke="#000" strokeWidth="1.5" strokeLinecap="round" />
-                <path d="M 15 65 L 30 80 L 45 65" stroke="#000" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-              </svg>
-            </div>
-          </div>
-
-          {/* Mobile Steps Block */}
-          <div style={{
-            padding: '40px 16px',
-            backgroundColor: '#FDFDFD',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '32px',
-            width: '100%',
-            boxSizing: 'border-box',
-            alignItems: 'center'
-          }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', width: '100%', alignItems: 'center' }}>
-              <div style={{ position: 'relative' }}>
-                <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                  <MobilePill bg="#FFFDE0" color="#000">Specific soil selection</MobilePill>
-                </motion.div>
-                <svg width="50" height="70" viewBox="0 0 150 150" style={{ position: 'absolute', left: 'calc(100% + 5px)', top: '12px', overflow: 'visible', zIndex: 1 }}>
-                  <circle cx="0" cy="0" r="5" fill="none" stroke="#000" strokeWidth="3" />
-                  <path d="M 5 0 L 30 0 C 60 0, 60 100, 30 100 L 0 100" stroke="#000" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M 15 85 L 0 100 L 15 115" stroke="#000" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                </svg>
+                  <div style={{ position: 'relative' }}>
+                    <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
+                      <ProcessCardFixed bg="#FFFDE0" color="#000" title="Custom quality standards" />
+                    </motion.div>
+                  </div>
+                </div>
               </div>
 
-              <div style={{ position: 'relative' }}>
-                <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
-                  <MobilePill bg="#FFDA44" color="#fff">Organic / Conventional farming</MobilePill>
-                </motion.div>
-                <svg width="50" height="80" viewBox="0 0 150 150" style={{ position: 'absolute', right: 'calc(100% + 5px)', top: '20px', overflow: 'visible', zIndex: 1 }}>
-                  <circle cx="150" cy="0" r="5" fill="none" stroke="#000" strokeWidth="3" />
-                  <path d="M 145 0 L 120 0 C 90 0, 90 100, 120 100 L 150 100" stroke="#000" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M 135 85 L 150 100 L 135 115" stroke="#000" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                </svg>
+              {/* RIGHT SIDE: Image */}
+              <div style={{ flex: '0 0 45%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <div style={{ position: 'relative', width: '350px', height: '350px' }}>
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
+                    whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      backgroundColor: 'transparent',
+                      borderRadius: '175px 0 175px 0',
+                      border: `6px solid #333`,
+                      overflow: 'hidden',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      zIndex: 2,
+                    }}
+                  >
+                    <div style={{
+                      width: '100%', height: '100%', backgroundColor: 'transparent', borderRadius: '180px 0 180px 0', overflow: 'hidden'
+                    }}>
+                      <img src={hww1} alt="Farmers" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
+                  </motion.div>
+                  {/* SVG Arrow from image */}
+                  <svg width="100" height="300" viewBox="0 0 100 300" style={{ position: 'absolute', bottom: '-270px', left: '50%', transform: 'translateX(-50%)', zIndex: 1, overflow: 'visible' }}>
+                    <line x1="50" y1="0" x2="50" y2="230" stroke="#000" strokeWidth="2" strokeLinecap="round" />
+                    <path d="M 35 210 L 50 230 L 65 210" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    <circle cx="50" cy="230" r="40" stroke="#eee" strokeWidth="1.5" fill="none" />
+                    <circle cx="50" cy="230" r="60" stroke="#f5f5f5" strokeWidth="1.5" fill="none" />
+                  </svg>
+                </div>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                  style={{
+                    fontFamily: FONT_CONTENT,
+                    fontSize: '38px',
+                    fontWeight: 500,
+                    color: '#333',
+                    textAlign: 'center',
+                    marginTop: '280px',
+                    lineHeight: '1.4',
+                    maxWidth: '400px'
+                  }}
+                >
+                  We don’t depend on middle layers, <br />
+                  we work close to the source
+                </motion.p>
               </div>
 
-              <div style={{ position: 'relative' }}>
-                <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
-                  <MobilePill bg="#FFFDE0" color="#000">Custom quality standards</MobilePill>
-                </motion.div>
-              </div>
             </div>
           </div>
         </div>
-      ) : (
+      </div>
+
+      <div className="desktop-only-view">
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <div style={{
             position: 'relative',
@@ -184,7 +188,6 @@ const HowWeWork: React.FC = () => {
                 <h3 style={{ fontFamily: FONT_HEADING, fontSize: 'clamp(80px, 8vw, 130px)', fontWeight: 400, color: '#000', margin: 0 }}>Demand</h3>
                 <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: 'clamp(42px, 4vw, 64px)', fontWeight: 400, color: '#FFDA44', margin: 0 }}>Driven</h4>
               </motion.div>
-
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -299,7 +302,7 @@ const HowWeWork: React.FC = () => {
 
               <div style={{ position: 'relative' }}>
                 <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
-                  <ProcessCard bg="#808080" color="#fff" title="Organic / Conventional farming" />
+                  <ProcessCard bg="#FFDA44" color="#fff" title="Organic / Conventional farming" />
                 </motion.div>
                 <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', right: 'calc(100% + 20px)', top: '45px', overflow: 'visible', zIndex: 1 }}>
                   <circle cx="150" cy="0" r="5" fill="none" stroke="#000" strokeWidth="2" />
@@ -317,7 +320,7 @@ const HowWeWork: React.FC = () => {
             <div style={{ flex: '1' }} />
           </div>
         </div>
-      )}
+      </div>
     </section>
   );
 };
@@ -345,26 +348,26 @@ const ProcessCard: React.FC<{ bg: string; color: string; title: string }> = ({ b
   </motion.div>
 );
 
-const MobilePill: React.FC<{ bg: string; color: string; children: React.ReactNode }> = ({ bg, color, children }) => (
+const ProcessCardFixed: React.FC<{ bg: string; color: string; title: string; height?: string }> = ({ bg, color, title, height = '80px' }) => (
   <motion.div
     transition={{ duration: 0.4, ease: "easeOut" }}
     style={{
-      position: 'relative',
-      zIndex: 2,
       backgroundColor: bg,
-      borderRadius: '8px',
-      padding: '8px 14px',
-      fontFamily: FONT_CONTENT,
-      fontSize: '10px',
-      fontWeight: 700,
-      color,
-      textAlign: 'center',
-      width: 'max-content',
-      maxWidth: '140px',
-      boxShadow: '0 4px 10px rgba(0,0,0,0.05)',
-      border: bg === '#FFDA44' ? 'none' : '1px solid #eee'
-    }}>
-    {children}
+      borderRadius: '24px',
+      width: '320px',
+      height: height,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '0 20px',
+      boxShadow: '0 10px 25px rgba(0,0,0,0.05)',
+      cursor: 'pointer',
+      border: '1px solid rgba(0,0,0,0.05)',
+      position: 'relative',
+      zIndex: 2
+    }}
+  >
+    <span style={{ fontFamily: FONT_CONTENT, fontSize: '32px', fontWeight: 700, color, textAlign: 'center' }}>{title}</span>
   </motion.div>
 );
 

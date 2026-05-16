@@ -23,3 +23,29 @@ img {
   display: block;
   max-width: 100%;
 }
+
+/* --- MOBILE RESPONSIVENESS HIDE/SHOW --- */
+.mobile-only-view {
+  display: none !important;
+}
+
+@media (max-width: 1024px) {
+  .desktop-only-view {
+    display: none !important;
+  }
+  .mobile-only-view {
+    display: block !important;
+  }
+  
+  .our-strength-section {
+    margin-top: -30px !important;
+  }
+  .our-strength-heading {
+    font-size: 36px !important;
+    padding: 10px 0 10px !important;
+  }
+  .how-we-work-heading {
+    font-size: 36px !important;
+    padding: 10px 0 10px !important;
+  }
+}

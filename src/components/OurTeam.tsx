@@ -27,7 +27,7 @@ const OurTeam: React.FC = () => {
   const isMobile = useIsMobile();
 
   return (
-    <section style={{ backgroundColor: '#fff', padding: isMobile ? '40px 0 50px' : '70px 0 80px' }}>
+    <section style={{ backgroundColor: '#fff', padding: isMobile ? '10px 0 50px' : '70px 0 80px' }}>
 
       <h2 style={{
         fontFamily: 'Montserrat, sans-serif',
@@ -72,7 +72,7 @@ const OurTeam: React.FC = () => {
       <div style={{ textAlign: 'center', padding: isMobile ? '0 16px' : '0 40px' }}>
         <h3 style={{
           fontFamily: 'Montserrat, sans-serif',
-          fontSize: isMobile ? '22px' : '25px',
+          fontSize: isMobile ? '18px' : '25px',
           fontWeight: 900, color: YELLOW_ACCENT,
           lineHeight: '1.3', marginBottom: '16px',
         }}>
@@ -80,7 +80,7 @@ const OurTeam: React.FC = () => {
         </h3>
         <p style={{
           fontFamily: FONT_CONTENT,
-          fontSize: isMobile ? '14px' : '30px',
+          fontSize: isMobile ? '18px' : '30px',
           fontWeight: 600, color: '#333',
         }}>
           We are open to partnerships with importers, distributors, and global buyers
