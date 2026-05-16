@@ -106,7 +106,7 @@ const SupplyDriven: React.FC = () => {
           backgroundColor: '#fff',
           marginTop: '-250px'
         }}>
-          <div style={{ flex: '0 0 55%', zIndex: 10, paddingLeft: '15%', paddingTop: '0px', marginTop: '-19px' }}>
+          <div style={{ flex: '0 0 55%', zIndex: 10, paddingLeft: '5%', paddingTop: '0px', marginTop: '-19px' }}>
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -229,11 +229,11 @@ const SupplyDriven: React.FC = () => {
           gap: '10%',
           alignItems: 'center'
         }}>
-          <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '46px', alignItems: 'center', zIndex: 10, position: 'relative', top: '-150px', marginLeft: '650px' }}>
+          <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '46px', alignItems: 'center', zIndex: 10, position: 'relative', top: '-150px', marginLeft: '630px' }}>
             <div style={{ position: 'relative' }}>
-                <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                  <ProcessCard bg="#FFFDE0" color="#000" title="Export Quality Products" />
-                </motion.div>
+              <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+                <ProcessCard bg="#FFFDE0" color="#000" title="Export Quality Products" />
+              </motion.div>
               <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', right: 'calc(100% + 20px)', top: '45px', overflow: 'visible', zIndex: 1 }}>
                 <circle cx="150" cy="0" r="5" fill="none" stroke="#000" strokeWidth="2" />
                 <path d="M 145 0 L 110 0 C 70 0, 70 136, 110 136 L 150 136" stroke="#000" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
@@ -242,9 +242,9 @@ const SupplyDriven: React.FC = () => {
             </div>
 
             <div style={{ position: 'relative' }}>
-                <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
-                  <ProcessCard bg="#808080" color="#fff" title="Competitive pricing" />
-                </motion.div>
+              <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
+                <ProcessCard bg="#808080" color="#fff" title="Competitive pricing" />
+              </motion.div>
               <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', left: 'calc(100% + 20px)', top: '45px', overflow: 'visible', zIndex: 1 }}>
                 <circle cx="0" cy="0" r="5" fill="none" stroke="#000" strokeWidth="2" />
                 <path d="M 5 0 L 40 0 C 80 0, 80 136, 40 136 L 0 136" stroke="#000" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
@@ -253,9 +253,9 @@ const SupplyDriven: React.FC = () => {
             </div>
 
             <div style={{ position: 'relative' }}>
-                <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
-                  <ProcessCard bg="#FFFDE0" color="#000" title="Faster turnaround" />
-                </motion.div>
+              <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
+                <ProcessCard bg="#FFFDE0" color="#000" title="Faster turnaround" />
+              </motion.div>
             </div>
           </div>
           <div style={{ flex: '1' }} />

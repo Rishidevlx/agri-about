@@ -72,7 +72,7 @@ const OurTeam: React.FC = () => {
       <div style={{ textAlign: 'center', padding: isMobile ? '0 16px' : '0 40px' }}>
         <h3 style={{
           fontFamily: 'Montserrat, sans-serif',
-          fontSize: isMobile ? '22px' : '38px',
+          fontSize: isMobile ? '22px' : '25px',
           fontWeight: 900, color: YELLOW_ACCENT,
           lineHeight: '1.3', marginBottom: '16px',
         }}>
@@ -80,7 +80,7 @@ const OurTeam: React.FC = () => {
         </h3>
         <p style={{
           fontFamily: FONT_CONTENT,
-          fontSize: isMobile ? '14px' : '20px',
+          fontSize: isMobile ? '14px' : '30px',
           fontWeight: 600, color: '#333',
         }}>
           We are open to partnerships with importers, distributors, and global buyers
