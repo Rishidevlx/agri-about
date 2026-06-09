@@ -84,7 +84,7 @@ const HowWeWork: React.FC = () => {
                   
                   <div style={{ position: 'relative' }}>
                     <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
-                      <ProcessCardFixed bg="#808080" color="#fff" title="Organic / Conventional farming" height="100px" />
+                      <ProcessCardFixed bg="#F3CD00" color="#fff" title="Organic / Conventional farming" height="100px" />
                     </motion.div>
                     <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', right: 'calc(100% + 30px)', top: '40px', overflow: 'visible', zIndex: 1 }}>
                       <circle cx="150" cy="0" r="5" fill="none" stroke="#000" strokeWidth="2" />
