@@ -67,7 +67,7 @@ const SupplyDriven: React.FC = () => {
                     viewport={{ once: true }}
                   >
                     <h3 style={{ fontFamily: FONT_HEADING, fontSize: '110px', fontWeight: 400, color: '#000', margin: 0, lineHeight: 0.9 }}>Supply</h3>
-                    <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: '80px', fontWeight: 400, color: '#FFDA44', margin: 0 }}>Driven</h4>
+                    <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: '80px', fontWeight: 400, color: '#F3CD00', margin: 0 }}>Driven</h4>
                   </motion.div>
                   <motion.p
                     initial={{ opacity: 0, x: -30 }}
@@ -101,7 +101,7 @@ const SupplyDriven: React.FC = () => {
                   
                   <div style={{ position: 'relative' }}>
                     <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
-                      <ProcessCardFixed bg="#808080" color="#fff" title="Competitive pricing" />
+                      <ProcessCardFixed bg="#F3CD00" color="#fff" title="Competitive pricing" />
                     </motion.div>
                     <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', left: 'calc(100% + 30px)', top: '40px', overflow: 'visible', zIndex: 1 }}>
                       <circle cx="0" cy="0" r="5" fill="none" stroke="#000" strokeWidth="2" />
@@ -138,7 +138,7 @@ const SupplyDriven: React.FC = () => {
           backgroundColor: '#fff',
           marginTop: 'clamp(-250px, -13vw, -100px)'
         }}>
-          <div style={{ flex: '0 0 55%', zIndex: 10, paddingLeft: '5%', paddingTop: '0px', marginTop: '-19px' }}>
+          <div style={{ flex: '0 0 55%', zIndex: 10, paddingLeft: '12%', paddingTop: '0px', marginTop: '-19px' }}>
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -146,7 +146,7 @@ const SupplyDriven: React.FC = () => {
               style={{ marginBottom: '50px', marginTop: '-50px' }}
             >
               <h3 style={{ fontFamily: FONT_HEADING, fontSize: 'clamp(72px, 7.3vw, 110px)', fontWeight: 400, color: '#000', margin: 0, lineHeight: 0.9 }}>Supply</h3>
-              <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: 'clamp(44px, 4.5vw, 68px)', fontWeight: 400, color: '#FFDA44', margin: 0 }}>Driven</h4>
+              <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: 'clamp(44px, 4.5vw, 68px)', fontWeight: 400, color: '#F3CD00', margin: 0 }}>Driven</h4>
             </motion.div>
             <motion.p
               initial={{ opacity: 0, x: -30 }}
@@ -218,7 +218,7 @@ const SupplyDriven: React.FC = () => {
           gap: '10%',
           alignItems: 'center'
         }}>
-          <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: 'clamp(28px, 3vw, 46px)', alignItems: 'center', zIndex: 10, position: 'relative', top: 'clamp(-110px, -7.8vw, -60px)', marginLeft: 'clamp(430px, 37.6vw, 730px)' }}>
+          <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: 'clamp(28px, 3vw, 46px)', alignItems: 'center', zIndex: 10, position: 'relative', top: 'clamp(-110px, -7.8vw, -60px)', marginLeft: 'clamp(480px, 42vw, 800px)' }}>
             <div style={{ position: 'relative' }}>
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
                 <ProcessCard bg="#FFFDE0" color="#000" title="Export Quality Products" />
@@ -232,7 +232,7 @@ const SupplyDriven: React.FC = () => {
 
             <div style={{ position: 'relative' }}>
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
-                <ProcessCard bg="#808080" color="#fff" title="Competitive pricing" />
+                <ProcessCard bg="#F3CD00" color="#fff" title="Competitive pricing" />
               </motion.div>
               <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', left: 'calc(100% + 20px)', top: '45px', overflow: 'visible', zIndex: 1 }}>
                 <circle cx="0" cy="0" r="5" fill="none" stroke="#000" strokeWidth="2" />

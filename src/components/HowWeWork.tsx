@@ -50,7 +50,7 @@ const HowWeWork: React.FC = () => {
                     viewport={{ once: true }}
                   >
                     <h3 style={{ fontFamily: FONT_HEADING, fontSize: '110px', fontWeight: 400, color: '#000', margin: 0, lineHeight: 0.9 }}>Demand</h3>
-                    <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: '80px', fontWeight: 400, color: '#FFDA44', margin: 0 }}>Driven</h4>
+                    <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: '80px', fontWeight: 400, color: '#F3CD00', margin: 0 }}>Driven</h4>
                   </motion.div>
                   <motion.p
                     initial={{ opacity: 0, x: -30 }}
@@ -186,7 +186,7 @@ const HowWeWork: React.FC = () => {
                 style={{ lineHeight: '0.7', marginBottom: '60px', marginTop: '-60px' }}
               >
                 <h3 style={{ fontFamily: FONT_HEADING, fontSize: 'clamp(80px, 8vw, 130px)', fontWeight: 400, color: '#000', margin: 0 }}>Demand</h3>
-                <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: 'clamp(42px, 4vw, 64px)', fontWeight: 400, color: '#FFDA44', margin: 0 }}>Driven</h4>
+                <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: 'clamp(42px, 4vw, 64px)', fontWeight: 400, color: '#F3CD00', margin: 0 }}>Driven</h4>
               </motion.div>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -302,7 +302,7 @@ const HowWeWork: React.FC = () => {
 
               <div style={{ position: 'relative' }}>
                 <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
-                  <ProcessCard bg="#FFDA44" color="#fff" title="Organic / Conventional farming" />
+                  <ProcessCard bg="#F3CD00" color="#fff" title="Organic / Conventional farming" />
                 </motion.div>
                 <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', right: 'calc(100% + 20px)', top: '45px', overflow: 'visible', zIndex: 1 }}>
                   <circle cx="150" cy="0" r="5" fill="none" stroke="#000" strokeWidth="2" />

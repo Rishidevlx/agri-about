@@ -3,7 +3,7 @@ import { useIsMobile } from '../hooks/useIsMobile';
 
 const FONT_HEADING = "'Autography', cursive";
 const FONT_CONTENT = "'TypoSlab Irregular Demo', serif";
-const YELLOW_ACCENT = '#FFDA44';
+const YELLOW_ACCENT = '#F3CD00';
 
 /* Authentic brush-stroke circle */
 const BrushCircle: React.FC<{ size?: number }> = ({ size = 220 }) => (
@@ -69,21 +69,28 @@ const OurTeam: React.FC = () => {
       </div>
 
       {/* CTA */}
-      <div style={{ textAlign: 'center', padding: isMobile ? '0 16px' : '0 40px' }}>
+      <div style={{ 
+        textAlign: 'center', 
+        padding: isMobile ? '32px 16px' : '48px 40px',
+        backgroundColor: '#F3CD00',
+        borderRadius: '24px',
+        margin: isMobile ? '0 16px' : '0 auto',
+        maxWidth: '1100px',
+      }}>
         <h3 style={{
           fontFamily: 'Montserrat, sans-serif',
-          fontSize: isMobile ? '18px' : '25px',
-          fontWeight: 900, color: YELLOW_ACCENT,
+          fontSize: isMobile ? '22px' : '32px',
+          fontWeight: 800, color: '#000000',
           lineHeight: '1.3', marginBottom: '16px',
         }}>
           Let's Build Global Trade Together
         </h3>
         <p style={{
-          fontFamily: FONT_CONTENT,
-          fontSize: isMobile ? '18px' : '30px',
-          fontWeight: 600, color: '#333',
+          fontFamily: 'Montserrat, sans-serif',
+          fontSize: isMobile ? '16px' : '22px',
+          fontWeight: 600, color: '#000000',
         }}>
-          We are open to partnerships with importers, distributors, and global buyers
+          We are open to partnerships with importers, distributors, and global buyers.
         </p>
       </div>
     </section>
