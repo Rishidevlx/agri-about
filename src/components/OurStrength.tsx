@@ -78,7 +78,7 @@ const OurStrength: React.FC = () => {
                   {/* Card 1 */}
                   <div style={{ position: 'relative', width: 'fit-content' }}>
                     <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                      <ProcessCardFixed bg="#FFFDE0" color="#000" title="Better pricing control" />
+                      <ProcessCardFixed bg="#F3CD00" color="#000" title="Better pricing control" />
                     </motion.div>
                     <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', left: 'calc(100% + 10px)', top: '40px', overflow: 'visible', zIndex: 1 }}>
                       <circle cx="0" cy="0" r="5" fill="none" stroke="#000" strokeWidth="2" />
@@ -102,7 +102,7 @@ const OurStrength: React.FC = () => {
                   {/* Card 3 */}
                   <div style={{ position: 'relative' }}>
                     <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
-                      <ProcessCardFixed bg="#FFFDE0" color="#000" title="Reliable sourcing" />
+                      <ProcessCardFixed bg="#F3CD00" color="#000" title="Reliable sourcing" />
                     </motion.div>
                   </div>
                 </div>
@@ -185,7 +185,7 @@ const OurStrength: React.FC = () => {
                 {/* Card 1 */}
                 <div style={{ position: 'relative', width: 'fit-content' }}>
                   <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                    <ProcessCard bg="#FFFDE0" color="#000" title="Better pricing control" />
+                    <ProcessCard bg="#F3CD00" color="#000" title="Better pricing control" />
                   </motion.div>
                   <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', left: 'calc(100% + 10px)', top: '40px', overflow: 'visible', zIndex: 1 }}>
                     <circle cx="0" cy="0" r="5" fill="none" stroke="#000" strokeWidth="2" />
@@ -209,7 +209,7 @@ const OurStrength: React.FC = () => {
                 {/* Card 3 */}
                 <div style={{ position: 'relative' }}>
                   <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
-                    <ProcessCard bg="#FFFDE0" color="#000" title="Reliable sourcing" />
+                    <ProcessCard bg="#F3CD00" color="#000" title="Reliable sourcing" />
                   </motion.div>
                 </div>
               </div>

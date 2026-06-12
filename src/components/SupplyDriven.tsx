@@ -90,7 +90,7 @@ const SupplyDriven: React.FC = () => {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '80px', position: 'relative' }}>
                   <div style={{ position: 'relative' }}>
                     <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                      <ProcessCardFixed bg="#FFFDE0" color="#000" title="Export Quality Products" />
+                      <ProcessCardFixed bg="#F3CD00" color="#000" title="Export Quality Products" />
                     </motion.div>
                     <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', right: 'calc(100% + 30px)', top: '40px', overflow: 'visible', zIndex: 1 }}>
                       <circle cx="150" cy="0" r="5" fill="none" stroke="#000" strokeWidth="2" />
@@ -112,7 +112,7 @@ const SupplyDriven: React.FC = () => {
 
                   <div style={{ position: 'relative' }}>
                     <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
-                      <ProcessCardFixed bg="#FFFDE0" color="#000" title="Faster turnaround" />
+                      <ProcessCardFixed bg="#F3CD00" color="#000" title="Faster turnaround" />
                     </motion.div>
                   </div>
                 </div>
@@ -123,7 +123,19 @@ const SupplyDriven: React.FC = () => {
         </div>
       </div>
 
-      <div className="desktop-only-view">
+      <div className="desktop-only-view" style={{ position: 'relative' }}>
+        {/* Center Vertical Line */}
+        <div style={{
+          position: 'absolute',
+          left: '50%',
+          top: '120px',
+          bottom: '120px',
+          width: '2px',
+          backgroundColor: '#e0e0e0',
+          transform: 'translateX(-50%)',
+          zIndex: 1
+        }} />
+
         {/* TOP BLOCK DESKTOP */}
         <div style={{
           width: '100vw',
@@ -166,7 +178,7 @@ const SupplyDriven: React.FC = () => {
             </motion.p>
           </div>
 
-          <div style={{ flex: '0 0 45%', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div style={{ flex: '0 0 45%', position: 'relative', right: 'clamp(20px, 3vw, 100px)', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <motion.div
               initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
               whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -218,10 +230,10 @@ const SupplyDriven: React.FC = () => {
           gap: '10%',
           alignItems: 'center'
         }}>
-          <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: 'clamp(28px, 3vw, 46px)', alignItems: 'center', zIndex: 10, position: 'relative', top: 'clamp(-110px, -7.8vw, -60px)', marginLeft: 'clamp(480px, 42vw, 800px)' }}>
+          <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: 'clamp(28px, 3vw, 46px)', alignItems: 'center', zIndex: 10, position: 'relative', top: 'clamp(-110px, -7.8vw, -60px)', marginLeft: 'clamp(520px, 45vw, 840px)' }}>
             <div style={{ position: 'relative' }}>
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                <ProcessCard bg="#FFFDE0" color="#000" title="Export Quality Products" />
+                <ProcessCard bg="#F3CD00" color="#000" title="Export Quality Products" />
               </motion.div>
               <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', right: 'calc(100% + 20px)', top: '45px', overflow: 'visible', zIndex: 1 }}>
                 <circle cx="150" cy="0" r="5" fill="none" stroke="#000" strokeWidth="2" />
@@ -243,7 +255,7 @@ const SupplyDriven: React.FC = () => {
 
             <div style={{ position: 'relative' }}>
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
-                <ProcessCard bg="#FFFDE0" color="#000" title="Faster turnaround" />
+                <ProcessCard bg="#F3CD00" color="#000" title="Faster turnaround" />
               </motion.div>
             </div>
           </div>

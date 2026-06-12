@@ -28,6 +28,8 @@ const HowWeWork: React.FC = () => {
         fontWeight: 800,
         textAlign: 'center', color: '#000',
         padding: '20px 0 10px',
+        marginTop: '-30px',
+        marginBottom: '60px',
         letterSpacing: '-1px',
         position: 'relative',
         zIndex: 100
@@ -40,7 +42,7 @@ const HowWeWork: React.FC = () => {
         <div style={{ width: '100%', display: 'flex', justifyContent: 'center', overflow: 'hidden', height: '380px' }}>
           <div style={{ width: '1100px', transform: 'scale(0.32)', transformOrigin: 'top center', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '30px' }}>
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '160px', width: '100%', maxWidth: '1000px' }}>
-              
+
               {/* LEFT SIDE: Text and Cards */}
               <div style={{ flex: 1, display: 'flex', flexDirection: 'column', paddingTop: '20px', paddingLeft: '40px' }}>
                 <div style={{ marginBottom: '100px' }}>
@@ -73,7 +75,7 @@ const HowWeWork: React.FC = () => {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '80px', position: 'relative' }}>
                   <div style={{ position: 'relative' }}>
                     <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                      <ProcessCardFixed bg="#FFFDE0" color="#000" title="Specific soil selection" />
+                      <ProcessCardFixed bg="#F3CD00" color="#000" title="Specific soil selection" />
                     </motion.div>
                     <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', left: 'calc(100% + 30px)', top: '40px', overflow: 'visible', zIndex: 1 }}>
                       <circle cx="0" cy="0" r="5" fill="none" stroke="#000" strokeWidth="2" />
@@ -81,7 +83,7 @@ const HowWeWork: React.FC = () => {
                       <path d="M 15 105 L 0 120 L 15 135" stroke="#000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                     </svg>
                   </div>
-                  
+
                   <div style={{ position: 'relative' }}>
                     <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
                       <ProcessCardFixed bg="#F3CD00" color="#fff" title="Organic / Conventional farming" height="100px" />
@@ -95,7 +97,7 @@ const HowWeWork: React.FC = () => {
 
                   <div style={{ position: 'relative' }}>
                     <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
-                      <ProcessCardFixed bg="#FFFDE0" color="#000" title="Custom quality standards" />
+                      <ProcessCardFixed bg="#F3CD00" color="#000" title="Custom quality standards" />
                     </motion.div>
                   </div>
                 </div>
@@ -291,7 +293,7 @@ const HowWeWork: React.FC = () => {
             <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: 'clamp(28px, 3vw, 46px)', alignItems: 'center', zIndex: 10, position: 'relative', top: 'clamp(-130px, -11.25vw, -80px)' }}>
               <div style={{ position: 'relative' }}>
                 <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                  <ProcessCard bg="#FFFDE0" color="#000" title="Specific soil selection" />
+                  <ProcessCard bg="#F3CD00" color="#000" title="Specific soil selection" />
                 </motion.div>
                 <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', left: 'calc(100% + 20px)', top: '45px', overflow: 'visible', zIndex: 1 }}>
                   <circle cx="0" cy="0" r="5" fill="none" stroke="#000" strokeWidth="2" />
@@ -313,7 +315,7 @@ const HowWeWork: React.FC = () => {
 
               <div style={{ position: 'relative' }}>
                 <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
-                  <ProcessCard bg="#FFFDE0" color="#000" title="Custom quality standards" />
+                  <ProcessCard bg="#F3CD00" color="#000" title="Custom quality standards" />
                 </motion.div>
               </div>
             </div>

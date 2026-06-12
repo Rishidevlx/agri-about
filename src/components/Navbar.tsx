@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
       borderBottom: '1px solid #f0f0f0'
     }}>
       <div style={{ fontSize: '1.8rem', fontWeight: 800, fontFamily: 'Montserrat' }}>
-        PACT<span style={{ color: 'var(--primary-yellow)' }}> VENTURES</span>
+        PACT<span style={{ color: '#F3CD00' }}> VENTURES</span>
       </div>
       
       <div style={{ display: 'flex', gap: '3rem' }}>
