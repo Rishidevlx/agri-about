@@ -1,5 +1,5 @@
 import React from 'react';
-import hww2 from '../assets/HWW 2.png';
+import hww2 from '../assets/2.png';
 import { motion } from 'framer-motion';
 
 const FONT_HEADING = "'Autography', cursive";
