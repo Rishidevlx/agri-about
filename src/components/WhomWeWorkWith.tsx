@@ -5,7 +5,7 @@ import { useIsMobile } from '../hooks/useIsMobile';
 const WhomWeWorkWith: React.FC = () => {
   const isMobile = useIsMobile();
   return (
-    <section style={{ backgroundColor: '#fff', padding: isMobile ? '40px 0 60px' : '60px 0 90px' }}>
+    <section style={{ backgroundColor: '#fff', padding: isMobile ? '40px 0 60px' : '60px 0 30px' }}>
 
       <h2 style={{
         fontFamily: 'Montserrat,sans-serif', fontSize: isMobile ? '32px' : '52px', fontWeight: 800,

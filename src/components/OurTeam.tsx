@@ -71,16 +71,21 @@ const OurTeam: React.FC = () => {
       {/* CTA */}
       <div style={{ 
         textAlign: 'center', 
-        padding: isMobile ? '32px 16px' : '48px 40px',
-        backgroundColor: '#000000',
+        padding: isMobile ? '32px 16px' : '0 40px',
+        backgroundColor: '#F3CD00',
         borderRadius: '24px',
         margin: isMobile ? '0 16px' : '0 auto',
-        maxWidth: '1100px',
+        maxWidth: '1577px',
+        height: isMobile ? 'auto' : '281px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
       }}>
         <h3 style={{
           fontFamily: 'Montserrat, sans-serif',
           fontSize: isMobile ? '22px' : '32px',
-          fontWeight: 800, color: '#F3CD00',
+          fontWeight: 800, color: '#000000',
           lineHeight: '1.3', marginBottom: '16px',
         }}>
           Let's Build Global Trade Together
@@ -88,7 +93,7 @@ const OurTeam: React.FC = () => {
         <p style={{
           fontFamily: 'Montserrat, sans-serif',
           fontSize: isMobile ? '16px' : '22px',
-          fontWeight: 600, color: '#F3CD00',
+          fontWeight: 600, color: '#312900',
         }}>
           We are open to partnerships with importers, distributors, and global buyers.
         </p>

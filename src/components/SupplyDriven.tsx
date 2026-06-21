@@ -83,7 +83,7 @@ const SupplyDriven: React.FC = () => {
                       maxWidth: '450px'
                     }}
                   >
-                    We leverage our wide farmer network to provide:
+                    We leverage our wide farmer network{' '}<br />to provide:
                   </motion.p>
                 </div>
 
@@ -124,17 +124,7 @@ const SupplyDriven: React.FC = () => {
       </div>
 
       <div className="desktop-only-view" style={{ position: 'relative' }}>
-        {/* Center Vertical Line */}
-        <div style={{
-          position: 'absolute',
-          left: '50%',
-          top: '120px',
-          bottom: '120px',
-          width: '2px',
-          backgroundColor: '#e0e0e0',
-          transform: 'translateX(-50%)',
-          zIndex: 1
-        }} />
+
 
         {/* TOP BLOCK DESKTOP */}
         <div style={{
@@ -174,7 +164,7 @@ const SupplyDriven: React.FC = () => {
                 margin: 0
               }}
             >
-              We leverage our wide farmer network to provide:
+              We leverage our wide farmer network{' '}<br />to provide:
             </motion.p>
           </div>
 
@@ -224,8 +214,8 @@ const SupplyDriven: React.FC = () => {
         {/* STEPS BLOCK DESKTOP */}
         <div style={{
           display: 'flex',
-          minHeight: 'clamp(500px, 46.9vw, 750px)',
-          padding: '0 8% 80px',
+          minHeight: 'clamp(300px, 28vw, 450px)',
+          padding: '0 8% 20px',
           backgroundColor: '#fff',
           gap: '10%',
           alignItems: 'center'
