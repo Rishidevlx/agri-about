@@ -45,12 +45,12 @@ const AboutUs: React.FC = () => {
         </div>
       ) : (
         /* ─ DESKTOP: two-column ─ */
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', maxWidth: '1300px', margin: '0 auto', padding: '0 40px', gap: '50px' }}>
-          <div style={{ flex: '0 0 520px' }}>
-            <img src={xLogo} alt="Pact Ventures X Logo" style={{ width: '520px', height: 'auto', display: 'block' }} />
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', maxWidth: '1300px', margin: '0 auto', padding: '0 4vw', gap: '4vw' }}>
+          <div style={{ flex: '1', display: 'flex', justifyContent: 'center', maxWidth: '520px' }}>
+            <img src={xLogo} alt="Pact Ventures X Logo" style={{ width: '100%', height: 'auto', display: 'block' }} />
           </div>
-          <div style={{ flex: '1', backgroundColor: 'transparent', borderRadius: '28px', padding: '44px 50px' }}>
-            <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '18px', fontWeight: 700, lineHeight: '1.85', color: '#000000', textAlign: 'justify' }}>
+          <div style={{ flex: '1', backgroundColor: 'transparent', borderRadius: '28px', padding: '20px 0' }}>
+            <p style={{ fontFamily: 'Inter, sans-serif', fontSize: 'clamp(14px, 1.4vw, 18px)', fontWeight: 700, lineHeight: '1.85', color: '#000000', textAlign: 'justify' }}>
               <span style={{ fontWeight: 900, color: '#F3CD00' }}>Pact Ventures</span>{' '}
               is a dynamic export-import company based in Tamil Nadu, South India. We specialize in
               exporting high-quality agricultural products by collaborating with local farmers and trusted

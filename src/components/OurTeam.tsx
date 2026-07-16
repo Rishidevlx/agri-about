@@ -71,12 +71,12 @@ const OurTeam: React.FC = () => {
       {/* CTA */}
       <div style={{ 
         textAlign: 'center', 
-        padding: isMobile ? '32px 16px' : '0 40px',
+        padding: isMobile ? '32px 16px' : '40px 40px',
         backgroundColor: '#F3CD00',
         borderRadius: '24px',
         margin: isMobile ? '0 16px' : '0 auto',
-        maxWidth: '1577px',
-        height: isMobile ? 'auto' : '281px',
+        maxWidth: '1000px',
+        height: 'auto',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',

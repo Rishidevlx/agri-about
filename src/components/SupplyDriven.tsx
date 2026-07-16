@@ -8,7 +8,7 @@ const FONT_CONTENT = "'TypoSlab Irregular Demo', serif";
 
 const SupplyDriven: React.FC = () => {
   return (
-    <section style={{ backgroundColor: '#fff', padding: '0' }}>
+    <section style={{ backgroundColor: 'var(--section-bg)', padding: '0' }}>
       <svg width="1" height="1" style={{ position: 'absolute', pointerEvents: 'none', opacity: 0 }}>
         <defs>
           <marker id="arrowhead-supply" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto">
@@ -21,41 +21,64 @@ const SupplyDriven: React.FC = () => {
         <div style={{ width: '100%', display: 'flex', justifyContent: 'center', overflow: 'hidden', height: '380px' }}>
           <div style={{ width: '1100px', transform: 'scale(0.32)', transformOrigin: 'top center', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '5px' }}>
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '160px', width: '100%', maxWidth: '1000px' }}>
-              
+
               {/* LEFT SIDE: Image */}
-              <div style={{ flex: '0 0 45%', display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative' }}>
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
-                  whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+              <div style={{ flex: '0 0 45%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <div style={{ position: 'relative', width: '350px', height: '350px' }}>
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
+                    whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      backgroundColor: 'transparent',
+                      borderRadius: '175px 0 175px 0',
+                      border: `6px solid #3b3c36`,
+                      overflow: 'hidden',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      zIndex: 2,
+                    }}
+                  >
+                    <div style={{
+                      width: '100%', height: '100%', backgroundColor: 'transparent', borderRadius: '180px 0 180px 0', overflow: 'hidden'
+                    }}>
+                      <img src={hww2} alt="Farmer" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
+                  </motion.div>
+                  {/* SVG Arrow from image */}
+                  <svg width="100" height="300" viewBox="0 0 100 300" style={{ position: 'absolute', bottom: '-270px', left: '50%', transform: 'translateX(-50%)', zIndex: 1, overflow: 'visible' }}>
+                    <line x1="50" y1="0" x2="50" y2="230" stroke="#000" strokeWidth="2" strokeLinecap="round" />
+                    <path d="M 35 210 L 50 230 L 65 210" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    <circle cx="50" cy="230" r="40" stroke="#eee" strokeWidth="1.5" fill="none" />
+                    <circle cx="50" cy="230" r="60" stroke="#f5f5f5" strokeWidth="1.5" fill="none" />
+                  </svg>
+                </div>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
                   style={{
-                    position: 'relative',
-                    width: '350px',
-                    height: '350px',
-                    backgroundColor: 'transparent',
-                    borderRadius: '175px 0 175px 0',
-                    border: `6px solid #3b3c36`,
-                    overflow: 'hidden',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    zIndex: 2,
+                    fontFamily: FONT_CONTENT,
+                    fontSize: '38px',
+                    fontWeight: 500,
+                    color: '#333',
+                    textAlign: 'center',
+                    marginTop: '280px',
+                    lineHeight: '1.4',
+                    maxWidth: '400px'
                   }}
                 >
-                  <div style={{
-                    width: '100%', height: '100%', backgroundColor: 'transparent', borderRadius: '180px 0 180px 0', overflow: 'hidden'
-                  }}>
-                    <img src={hww2} alt="Farmer" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                  </div>
-                </motion.div>
-                {/* SVG Arrow from image */}
-                <svg width="100" height="300" viewBox="0 0 100 300" style={{ position: 'absolute', bottom: '-270px', left: '50%', transform: 'translateX(-50%)', zIndex: 1, overflow: 'visible' }}>
-                  <line x1="50" y1="0" x2="50" y2="230" stroke="#000" strokeWidth="2" strokeLinecap="round" />
-                  <path d="M 35 210 L 50 230 L 65 210" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                  <circle cx="50" cy="230" r="40" stroke="#eee" strokeWidth="1.5" fill="none" />
-                  <circle cx="50" cy="230" r="60" stroke="#f5f5f5" strokeWidth="1.5" fill="none" />
-                </svg>
+                  Empowering creators and producers to scale by unlocking seamless market access and distribution
+                </motion.p>
               </div>
 
               {/* RIGHT SIDE: Text and Cards */}
@@ -98,7 +121,7 @@ const SupplyDriven: React.FC = () => {
                       <path d="M 135 105 L 150 120 L 135 135" stroke="#000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                     </svg>
                   </div>
-                  
+
                   <div style={{ position: 'relative' }}>
                     <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
                       <ProcessCardFixed bg="#F3CD00" color="#fff" title="Competitive pricing" />
@@ -137,7 +160,7 @@ const SupplyDriven: React.FC = () => {
           flexDirection: 'row-reverse',
           alignItems: 'center',
           padding: '0 8% 0 12%',
-          backgroundColor: '#fff',
+          backgroundColor: 'var(--section-bg)',
           marginTop: 'clamp(-250px, -13vw, -100px)'
         }}>
           <div style={{ flex: '0 0 55%', zIndex: 10, paddingLeft: '12%', paddingTop: '0px', marginTop: '-19px' }}>
@@ -202,12 +225,42 @@ const SupplyDriven: React.FC = () => {
                 <img src={hww2} alt="Farmer" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
             </motion.div>
-            <svg width="100" height="220" viewBox="0 0 100 220" style={{ position: 'absolute', bottom: 'clamp(-220px, -11.46vw, -155px)', left: '42%', transform: 'translateX(-50%)', zIndex: 1, overflow: 'visible' }}>
-              <line x1="50" y1="0" x2="50" y2="150" stroke="#000" strokeWidth="2" strokeLinecap="round" />
-              <path d="M 35 130 L 50 150 L 65 130" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-              <circle cx="50" cy="150" r="40" stroke="#eee" strokeWidth="1.5" fill="none" />
-              <circle cx="50" cy="150" r="60" stroke="#f5f5f5" strokeWidth="1.5" fill="none" />
-            </svg>
+            <div style={{
+              position: 'absolute',
+              bottom: 'clamp(-390px, -20.3vw, -310px)',
+              left: '42%',
+              transform: 'translateX(-50%)',
+              width: 'clamp(260px, 24vw, 400px)',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              zIndex: 10
+            }}>
+              <svg width="100" height="220" style={{ overflow: 'visible' }}>
+                <circle cx="50" cy="150" r="40" stroke="#eee" strokeWidth="1.5" fill="none" />
+                <circle cx="50" cy="150" r="60" stroke="#f5f5f5" strokeWidth="1.5" fill="none" />
+                <line x1="50" y1="0" x2="50" y2="150" stroke="#000" strokeWidth="2" strokeLinecap="round" />
+                <path d="M 35 130 L 50 150 L 65 130" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+              </svg>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                style={{
+                  fontFamily: FONT_CONTENT,
+                  fontSize: 'clamp(16px, 1.5vw, 24px)',
+                  fontWeight: 500,
+                  color: '#333',
+                  textAlign: 'center',
+                  marginTop: '30px',
+                  lineHeight: '1.4',
+                  maxWidth: 'clamp(260px, 24vw, 400px)'
+                }}
+              >
+                Empowering creators and producers to scale by unlocking seamless market access and distribution
+              </motion.p>
+            </div>
           </div>
         </div>
 
@@ -216,7 +269,7 @@ const SupplyDriven: React.FC = () => {
           display: 'flex',
           minHeight: 'clamp(300px, 28vw, 450px)',
           padding: '0 8% 20px',
-          backgroundColor: '#fff',
+          backgroundColor: 'var(--section-bg)',
           gap: '10%',
           alignItems: 'center'
         }}>

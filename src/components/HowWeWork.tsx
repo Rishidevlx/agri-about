@@ -9,7 +9,7 @@ const FONT_CONTENT = "'TypoSlab Irregular Demo', serif";
 const HowWeWork: React.FC = () => {
 
   return (
-    <section style={{ backgroundColor: '#fff', padding: '0', overflow: 'hidden' }}>
+    <section style={{ backgroundColor: 'var(--section-bg)', padding: '40px 0 0', overflow: 'hidden' }}>
       <svg width="1" height="1" style={{ position: 'absolute', pointerEvents: 'none', opacity: 0 }}>
         <defs>
           <marker id="arrowhead-mobile" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto">
@@ -27,9 +27,8 @@ const HowWeWork: React.FC = () => {
         fontSize: '52px',
         fontWeight: 800,
         textAlign: 'center', color: '#000',
-        padding: '20px 0 10px',
-        marginTop: '-30px',
-        marginBottom: '60px',
+        padding: '0 0 10px',
+        margin: '0 0 60px 0',
         letterSpacing: '-1px',
         position: 'relative',
         zIndex: 100
@@ -158,8 +157,8 @@ const HowWeWork: React.FC = () => {
                     maxWidth: '400px'
                   }}
                 >
-                  We don’t depend on middle layers, <br />
-                  we work close to the source
+                  Architecting hyper-responsive solutions tailored precisely to evolving
+                  consumer needs
                 </motion.p>
               </div>
 
@@ -176,7 +175,7 @@ const HowWeWork: React.FC = () => {
             display: 'flex',
             alignItems: 'center',
             padding: '0 5% 0 8%',
-            backgroundColor: '#fff',
+            backgroundColor: 'var(--section-bg)',
             marginTop: 'clamp(-100px, -5.2vw, -40px)'
           }}>
             <div style={{ flex: '0 0 55%', zIndex: 10, paddingTop: '0px' }}>
@@ -275,8 +274,8 @@ const HowWeWork: React.FC = () => {
                     maxWidth: 'clamp(260px, 24vw, 400px)'
                   }}
                 >
-                  We don’t depend on middle layers, <br />
-                  we work close to the source
+                  Architecting hyper-responsive solutions tailored precisely to evolving
+                  consumer needs
                 </motion.p>
               </div>
             </div>
@@ -286,7 +285,7 @@ const HowWeWork: React.FC = () => {
             display: 'flex',
             minHeight: 'clamp(350px, 32.5vw, 520px)',
             padding: '0 8% 0',
-            backgroundColor: '#fff',
+            backgroundColor: 'var(--section-bg)',
             gap: '10%',
             alignItems: 'center'
           }}>

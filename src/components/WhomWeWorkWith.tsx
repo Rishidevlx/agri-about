@@ -5,7 +5,7 @@ import { useIsMobile } from '../hooks/useIsMobile';
 const WhomWeWorkWith: React.FC = () => {
   const isMobile = useIsMobile();
   return (
-    <section style={{ backgroundColor: '#fff', padding: isMobile ? '40px 0 60px' : '60px 0 30px' }}>
+    <section style={{ backgroundColor: '#fff', padding: isMobile ? '40px 0 0' : '60px 0 0' }}>
 
       <h2 style={{
         fontFamily: 'Montserrat,sans-serif', fontSize: isMobile ? '32px' : '52px', fontWeight: 800,
@@ -16,7 +16,7 @@ const WhomWeWorkWith: React.FC = () => {
 
       <div style={{
         display: 'flex', justifyContent: 'center', alignItems: 'center',
-        padding: isMobile ? '0 16px 12px' : '0 40px',
+        padding: isMobile ? '0 16px 0' : '0 40px 0',
       }}>
         <img 
           src={xpactGif} 

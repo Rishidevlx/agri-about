@@ -9,7 +9,7 @@ const BACKGROUND = '#FFFFFF';
 
 const OurStrength: React.FC = () => {
   return (
-    <section className="our-strength-section" style={{ backgroundColor: BACKGROUND, padding: '0', overflow: 'hidden', marginTop: '-10px' }}>
+    <section className="our-strength-section" style={{ backgroundColor: BACKGROUND, padding: '100px 0 0', overflow: 'hidden', marginTop: '-100px', position: 'relative', zIndex: 10 }}>
 
       <h2 className="our-strength-heading" style={{
         fontFamily: 'Montserrat, sans-serif',
@@ -17,7 +17,7 @@ const OurStrength: React.FC = () => {
         fontWeight: 900,
         textAlign: 'center',
         color: '#000',
-        padding: '20px 0 50px',
+        padding: '0 0 50px',
         letterSpacing: '1px',
       }}>
         OUR STRENGTH

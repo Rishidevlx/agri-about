@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Caveat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
-*, *::before, *::after {
+:root {
+  --section-bg: #E5E4E2;
+}
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -33,17 +39,20 @@ img {
   .desktop-only-view {
     display: none !important;
   }
+
   .mobile-only-view {
     display: block !important;
   }
-  
+
   .our-strength-section {
     margin-top: -30px !important;
   }
+
   .our-strength-heading {
     font-size: 36px !important;
     padding: 10px 0 10px !important;
   }
+
   .how-we-work-heading {
     font-size: 36px !important;
     padding: 10px 0 10px !important;
