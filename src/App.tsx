@@ -24,7 +24,7 @@ const ScrollReveal: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 function App() {
   const isMobile = useIsMobile();
   const sideMargin = isMobile ? '0 12px' : '0 100px';
-  const strengthMargin = isMobile ? '0 4px' : '0 20px';
+  // const strengthMargin = isMobile ? '0 4px' : '0 20px';
 
   return (
     <>
