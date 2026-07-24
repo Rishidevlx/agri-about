@@ -3,7 +3,7 @@ import hww3 from '../assets/3.png'
 import { motion } from 'framer-motion';
 
 const FONT_HEADING = "'Autography', cursive";
-const FONT_CONTENT = "'TypoSlab Irregular Demo', serif";
+// const FONT_CONTENT = "'TypoSlab Irregular Demo', serif";
 const YELLOW_ACCENT = '#F3CD00';
 const BACKGROUND = '#FFFFFF';
 
