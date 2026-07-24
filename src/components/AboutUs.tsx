@@ -28,8 +28,7 @@ const AboutUs: React.FC = () => {
 
           {/* Yellow card full width */}
           <div style={{ width: '100%', backgroundColor: 'transparent', borderRadius: '20px', padding: '28px 24px' }}>
-            <p style={{
-              fontFamily: 'Inter, sans-serif', fontSize: '15px', fontWeight: 700,
+            <p className="global-content-style" style={{
               lineHeight: '1.8', color: '#000000', textAlign: 'justify',
             }}>
               <span style={{ fontWeight: 900, color: '#F3CD00' }}>Pact Ventures</span>{' '}
@@ -50,7 +49,7 @@ const AboutUs: React.FC = () => {
             <img src={xLogo} alt="Pact Ventures X Logo" style={{ width: '100%', height: 'auto', display: 'block' }} />
           </div>
           <div style={{ flex: '1', backgroundColor: 'transparent', borderRadius: '28px', padding: '20px 0' }}>
-            <p style={{ fontFamily: 'Inter, sans-serif', fontSize: 'clamp(14px, 1.4vw, 18px)', fontWeight: 700, lineHeight: '1.85', color: '#000000', textAlign: 'justify' }}>
+            <p className="global-content-style" style={{ lineHeight: '1.85', color: '#000000', textAlign: 'justify' }}>
               <span style={{ fontWeight: 900, color: '#F3CD00' }}>Pact Ventures</span>{' '}
               is a dynamic export-import company based in Tamil Nadu, South India. We specialize in
               exporting high-quality agricultural products by collaborating with local farmers and trusted

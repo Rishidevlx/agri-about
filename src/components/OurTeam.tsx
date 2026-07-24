@@ -90,10 +90,8 @@ const OurTeam: React.FC = () => {
         }}>
           Let's Build Global Trade Together
         </h3>
-        <p style={{
-          fontFamily: 'Montserrat, sans-serif',
-          fontSize: isMobile ? '16px' : '22px',
-          fontWeight: 600, color: '#312900',
+        <p className="global-content-style" style={{
+          color: '#312900',
         }}>
           We are open to partnerships with importers, distributors, and global buyers.
         </p>

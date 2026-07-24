@@ -66,6 +66,7 @@ const SupplyDriven: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.5 }}
+                  className="global-content-style"
                   style={{
                     fontFamily: FONT_CONTENT,
                     fontSize: '38px',
@@ -97,9 +98,8 @@ const SupplyDriven: React.FC = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 }}
+                    className="global-content-style"
                     style={{
-                      fontFamily: FONT_CONTENT,
-                      fontSize: '38px',
                       color: '#333',
                       lineHeight: '1.6',
                       marginTop: '30px',
@@ -178,9 +178,8 @@ const SupplyDriven: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
+              className="global-content-style"
               style={{
-                fontFamily: FONT_CONTENT,
-                fontSize: 'clamp(15px, 1.4vw, 22px)',
                 color: '#333',
                 lineHeight: '1.6',
                 maxWidth: 'clamp(340px, 34vw, 540px)',
@@ -247,10 +246,8 @@ const SupplyDriven: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.5 }}
+                className="global-content-style"
                 style={{
-                  fontFamily: FONT_CONTENT,
-                  fontSize: 'clamp(16px, 1.5vw, 24px)',
-                  fontWeight: 500,
                   color: '#333',
                   textAlign: 'center',
                   marginTop: '30px',
@@ -328,7 +325,7 @@ const ProcessCard: React.FC<{ bg: string; color: string; title: string }> = ({ b
       zIndex: 2
     }}
   >
-    <span style={{ fontFamily: FONT_CONTENT, fontSize: 'clamp(15px, 1.5vw, 24px)', fontWeight: 700, color, textAlign: 'center' }}>{title}</span>
+    <span className="global-content-style" style={{ color, textAlign: 'center' }}>{title}</span>
   </motion.div>
 );
 
@@ -351,7 +348,7 @@ const ProcessCardFixed: React.FC<{ bg: string; color: string; title: string }> =
       zIndex: 2
     }}
   >
-    <span style={{ fontFamily: FONT_CONTENT, fontSize: '32px', fontWeight: 700, color, textAlign: 'center' }}>{title}</span>
+    <span className="global-content-style" style={{ color, textAlign: 'center' }}>{title}</span>
   </motion.div>
 );
 

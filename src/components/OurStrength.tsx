@@ -64,10 +64,7 @@ const OurStrength: React.FC = () => {
               </div>
 
               <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '80px', paddingLeft: '40px' }}>
-                <p style={{
-                  fontFamily: FONT_CONTENT,
-                  fontSize: '40px',
-                  fontWeight: 400,
+                <p className="global-content-style" style={{
                   color: '#333',
                   lineHeight: '1.4',
                   marginBottom: '40px'
@@ -113,10 +110,8 @@ const OurStrength: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              className="global-content-style"
               style={{
-                fontFamily: FONT_CONTENT,
-                fontSize: '52px',
-                fontWeight: 500,
                 color: YELLOW_ACCENT,
                 lineHeight: '1.3',
                 textAlign: 'center',
@@ -171,10 +166,7 @@ const OurStrength: React.FC = () => {
             </div>
 
             <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: 'clamp(40px, 6.25vw, 100px)', paddingLeft: 'clamp(40px, 6.25vw, 100px)' }}>
-              <p style={{
-                fontFamily: FONT_CONTENT,
-                fontSize: 'clamp(18px, 1.75vw, 28px)',
-                fontWeight: 400,
+              <p className="global-content-style" style={{
                 color: '#333',
                 lineHeight: '1.4',
                 marginBottom: '40px'
@@ -220,10 +212,8 @@ const OurStrength: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            className="global-content-style"
             style={{
-              fontFamily: FONT_CONTENT,
-              fontSize: 'clamp(20px, 2vw, 32px)',
-              fontWeight: 500,
               color: YELLOW_ACCENT,
               lineHeight: '1.3',
               textAlign: 'center',
@@ -259,7 +249,7 @@ const ProcessCard: React.FC<{ bg: string; color: string; title: string }> = ({ b
       zIndex: 2
     }}
   >
-    <span style={{ fontFamily: FONT_CONTENT, fontSize: 'clamp(15px, 1.5vw, 24px)', fontWeight: 700, color, textAlign: 'center' }}>{title}</span>
+    <span className="global-content-style" style={{ color, textAlign: 'center' }}>{title}</span>
   </motion.div>
 );
 
@@ -282,7 +272,7 @@ const ProcessCardFixed: React.FC<{ bg: string; color: string; title: string }> =
       zIndex: 2
     }}
   >
-    <span style={{ fontFamily: FONT_CONTENT, fontSize: '32px', fontWeight: 700, color, textAlign: 'center' }}>{title}</span>
+    <span className="global-content-style" style={{ color, textAlign: 'center' }}>{title}</span>
   </motion.div>
 );
 

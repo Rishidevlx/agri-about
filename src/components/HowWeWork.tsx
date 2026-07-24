@@ -58,9 +58,8 @@ const HowWeWork: React.FC = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 }}
+                    className="global-content-style"
                     style={{
-                      fontFamily: FONT_CONTENT,
-                      fontSize: '38px',
                       color: '#333',
                       lineHeight: '1.6',
                       marginTop: '30px',
@@ -146,10 +145,8 @@ const HowWeWork: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.5 }}
+                  className="global-content-style"
                   style={{
-                    fontFamily: FONT_CONTENT,
-                    fontSize: '38px',
-                    fontWeight: 500,
                     color: '#333',
                     textAlign: 'center',
                     marginTop: '280px',
@@ -190,14 +187,12 @@ const HowWeWork: React.FC = () => {
                 <h4 style={{ fontFamily: FONT_SUBHEADING, fontSize: 'clamp(42px, 4vw, 64px)', fontWeight: 400, color: '#F3CD00', margin: 0 }}>Driven</h4>
               </motion.div>
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.3 }}
+                className="global-content-style"
                 style={{
-                  fontFamily: FONT_CONTENT,
-                  fontSize: 'clamp(16px, 1.5vw, 24px)',
-                  fontWeight: 400,
                   color: '#333',
                   lineHeight: '1.4',
                   maxWidth: 'clamp(360px, 34vw, 550px)'
@@ -263,10 +258,8 @@ const HowWeWork: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.5 }}
+                  className="global-content-style"
                   style={{
-                    fontFamily: FONT_CONTENT,
-                    fontSize: 'clamp(16px, 1.5vw, 24px)',
-                    fontWeight: 500,
                     color: '#333',
                     textAlign: 'center',
                     marginTop: '30px',
@@ -368,7 +361,7 @@ const ProcessCardFixed: React.FC<{ bg: string; color: string; title: string; hei
       zIndex: 2
     }}
   >
-    <span style={{ fontFamily: FONT_CONTENT, fontSize: '32px', fontWeight: 700, color, textAlign: 'center' }}>{title}</span>
+    <span className="global-content-style" style={{ color, textAlign: 'center' }}>{title}</span>
   </motion.div>
 );
 
