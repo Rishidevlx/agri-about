@@ -355,4 +355,5 @@ const ProcessCardFixed: React.FC<{ bg: string; color: string; title: string }> =
   </motion.div>
 );
 
+
 export default SupplyDriven;
