@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const FONT_HEADING = "'Autography', cursive";
 const FONT_SUBHEADING = "'Bouncy', sans-serif";
-const FONT_CONTENT = "'TypoSlab Irregular Demo', serif";
+// const FONT_CONTENT = "'TypoSlab Irregular Demo', serif";
 
 const HowWeWork: React.FC = () => {
 
@@ -338,7 +338,7 @@ const ProcessCard: React.FC<{ bg: string; color: string; title: string }> = ({ b
       zIndex: 2
     }}
   >
-    <span style={{ fontFamily: FONT_CONTENT, fontSize: 'clamp(15px, 1.5vw, 24px)', fontWeight: 700, color, textAlign: 'center' }}>{title}</span>
+    <span className="global-content-style" style={{ color, textAlign: 'center' }}>{title}</span>
   </motion.div>
 );
 
