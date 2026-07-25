@@ -1,7 +1,7 @@
 import React from 'react';
 import { useIsMobile } from '../hooks/useIsMobile';
 
-const FONT_HEADING = "'Autography', cursive";
+// const FONT_HEADING = "'Autography', cursive";
 const FONT_CONTENT = "'TypoSlab Irregular Demo', serif";
 const YELLOW_ACCENT = '#F3CD00';
 
@@ -59,10 +59,8 @@ const OurTeam: React.FC = () => {
               fontSize: isMobile ? '18px' : '26px',
               fontWeight: 700, color: '#000', marginBottom: '2px',
             }}>{m.name}</p>
-            <p style={{
-              fontFamily: FONT_HEADING,
-              fontSize: isMobile ? '24px' : '36px',
-              fontWeight: 400, color: YELLOW_ACCENT,
+            <p className="global-content-style" style={{
+              color: YELLOW_ACCENT,
             }}>{m.role}</p>
           </div>
         ))}
