@@ -1,8 +1,7 @@
 import React from 'react';
 import { useIsMobile } from '../hooks/useIsMobile';
 
-// const FONT_HEADING = "'Autography', cursive";
-const FONT_CONTENT = "'TypoSlab Irregular Demo', serif";
+const FONT_HEADING = "'Autography', cursive";
 const YELLOW_ACCENT = '#F3CD00';
 
 /* Authentic brush-stroke circle */
@@ -27,74 +26,81 @@ const OurTeam: React.FC = () => {
   const isMobile = useIsMobile();
 
   return (
-    <section style={{ backgroundColor: '#fff', padding: isMobile ? '10px 0 50px' : '70px 0 80px' }}>
+    <>
+      {/* Team section — #E5E4E2 bg, same padding as before, no extra space */}
+      <section style={{ backgroundColor: '#E5E4E2', padding: isMobile ? '10px 0 20px' : '70px 0 30px' }}>
 
-      <h2 style={{
-        fontFamily: 'Montserrat, sans-serif',
-        fontSize: isMobile ? '32px' : '52px',
-        fontWeight: 1000, textAlign: 'center', color: '#000',
-        letterSpacing: '2px', marginBottom: isMobile ? '36px' : '60px',
-      }}>
-        OUR TEAM
-      </h2>
-
-      {/* Team cards */}
-      <div style={{
-        display: 'flex',
-        flexDirection: isMobile ? 'column' : 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: isMobile ? '32px' : '90px',
-        flexWrap: 'wrap',
-        marginBottom: isMobile ? '48px' : '80px',
-        padding: '0 16px',
-      }}>
-        {members.map(m => (
-          <div key={m.name} style={{ textAlign: 'center' }}>
-            <div style={{ width: isMobile ? '140px' : '220px', height: isMobile ? '140px' : '220px', margin: '0 auto 12px' }}>
-              <BrushCircle size={isMobile ? 140 : 220} />
-            </div>
-            <p style={{
-              fontFamily: FONT_CONTENT,
-              fontSize: isMobile ? '18px' : '26px',
-              fontWeight: 700, color: '#000', marginBottom: '2px',
-            }}>{m.name}</p>
-            <p className="global-content-style" style={{
-              color: YELLOW_ACCENT,
-            }}>{m.role}</p>
-          </div>
-        ))}
-      </div>
-
-      {/* CTA */}
-      <div style={{ 
-        textAlign: 'center', 
-        padding: isMobile ? '32px 16px' : '40px 40px',
-        backgroundColor: '#F3CD00',
-        borderRadius: '24px',
-        margin: isMobile ? '0 16px' : '0 auto',
-        maxWidth: '1000px',
-        height: 'auto',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>
-        <h3 style={{
+        <h2 style={{
           fontFamily: 'Montserrat, sans-serif',
-          fontSize: isMobile ? '22px' : '32px',
-          fontWeight: 800, color: '#000000',
-          lineHeight: '1.3', marginBottom: '16px',
+          fontSize: isMobile ? '32px' : '52px',
+          fontWeight: 1000, textAlign: 'center', color: '#000',
+          letterSpacing: '2px', marginBottom: isMobile ? '36px' : '60px',
         }}>
-          Let's Build Global Trade Together
-        </h3>
-        <p className="global-content-style" style={{
-          color: '#312900',
+          OUR TEAM
+        </h2>
+
+        {/* Team cards */}
+        <div style={{
+          display: 'flex',
+          flexDirection: isMobile ? 'column' : 'row',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: isMobile ? '32px' : '90px',
+          flexWrap: 'wrap',
+          padding: '0 16px',
         }}>
-          We are open to partnerships with importers, distributors, and global buyers.
-        </p>
-      </div>
-    </section>
+          {members.map(m => (
+            <div key={m.name} style={{ textAlign: 'center' }}>
+              <div style={{ width: isMobile ? '140px' : '220px', height: isMobile ? '140px' : '220px', margin: '0 auto 12px' }}>
+                <BrushCircle size={isMobile ? 140 : 220} />
+              </div>
+              {/* Name — global Outfit font */}
+              <p className="global-content-style" style={{
+                color: '#000', marginBottom: '2px', fontWeight: 700,
+              }}>{m.name}</p>
+              {/* Role — Autography cursive */}
+              <p style={{
+                fontFamily: FONT_HEADING,
+                fontSize: isMobile ? '24px' : '36px',
+                fontWeight: 400, color: YELLOW_ACCENT,
+              }}>{m.role}</p>
+            </div>
+          ))}
+        </div>
+
+      </section>
+
+      {/* CTA footer — white bg */}
+      <section style={{ backgroundColor: '#fff', padding: isMobile ? '40px 16px' : '60px 40px' }}>
+        <div style={{
+          textAlign: 'center',
+          padding: isMobile ? '32px 16px' : '40px 40px',
+          backgroundColor: '#F3CD00',
+          borderRadius: '24px',
+          margin: '0 auto',
+          maxWidth: '1000px',
+          height: 'auto',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}>
+          <h3 style={{
+            fontFamily: 'Montserrat, sans-serif',
+            fontSize: isMobile ? '22px' : '32px',
+            fontWeight: 800, color: '#000000',
+            lineHeight: '1.3', marginBottom: '16px',
+          }}>
+            Let's Build Global Trade Together
+          </h3>
+          <p className="global-content-style" style={{
+            color: '#312900',
+          }}>
+            We are open to partnerships with importers, distributors, and global buyers.
+          </p>
+        </div>
+      </section>
+    </>
   );
 };
 

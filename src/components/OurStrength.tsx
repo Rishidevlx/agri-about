@@ -110,8 +110,10 @@ const OurStrength: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="global-content-style"
               style={{
+                fontFamily: "'Outfit', Inter, sans-serif",
+                fontSize: 'clamp(10px, 3vw, 30px)',
+                fontWeight: 300,
                 color: YELLOW_ACCENT,
                 lineHeight: '1.3',
                 textAlign: 'center',
@@ -212,8 +214,10 @@ const OurStrength: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="global-content-style"
             style={{
+              fontFamily: "'Outfit', Inter, sans-serif",
+              fontSize: 'clamp(14px, 1.8vw, 26px)',
+              fontWeight: 400,
               color: YELLOW_ACCENT,
               lineHeight: '1.3',
               textAlign: 'center',

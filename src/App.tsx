@@ -35,9 +35,7 @@ function App() {
       <ScrollReveal><HowWeWork /></ScrollReveal>
       <ScrollReveal><SupplyDriven /></ScrollReveal>
       <ScrollReveal><OurStrength /></ScrollReveal>
-      <div style={{ margin: sideMargin }}>
-        <ScrollReveal><OurTeam /></ScrollReveal>
-      </div>
+      <ScrollReveal><OurTeam /></ScrollReveal>
     </>
   );
 }
